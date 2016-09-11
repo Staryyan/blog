@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="blog" extends="struts-default">
+        <action name="login" class="actions.loginAction" method="execute">
+            <result name="success">/main_Signed.jsp</result>
+            <result name="error">/main_unSigned.jsp</result>
+        </action>
+        <action name="register" class="actions.registerAction" method="execute">
+            <result name="success">/main_unSigned.jsp</result>
+            <result name="error">/main_unSigned.jsp</result>
+        </action>
+        <action name="changePassword" class="actions.changePassword" method="execute">
+            <result name="success">/main_Signed.jsp</result>
+            <result name="error">/main_unSigned.jsp</result>
+        </action>
+    </package>
+</struts>
