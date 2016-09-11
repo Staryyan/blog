@@ -1,5 +1,6 @@
 package actions;
 
+import actions.dbUtil.DBUtil;
 import beans.User;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
@@ -11,7 +12,6 @@ import javax.servlet.http.Cookie;
  * All right reserved.
  */
 public class loginAction extends ActionSupport {
-    private blogService m_service;
     private String userName;
     private String password;
 
@@ -32,11 +32,10 @@ public class loginAction extends ActionSupport {
     }
 
     public loginAction() {
-        m_service = new blogService();
     }
     public String execute() {
-        User t_user =  m_service.login(userName, password);
-        if (t_user != null) {
+        User t_user = DBUtil.queryUser(userName);
+        if (t_user != null && t_user.getPassword().equals(password)) {
             Cookie cookie = new Cookie("userName", t_user.getUserName());
             ServletActionContext.getResponse().addCookie(cookie);
             return "success";

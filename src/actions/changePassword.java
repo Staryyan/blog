@@ -1,5 +1,7 @@
 package actions;
 
+import actions.dbUtil.DBUtil;
+import beans.User;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -7,7 +9,6 @@ import com.opensymphony.xwork2.ActionSupport;
  * All right reserved.
  */
 public class changePassword extends ActionSupport {
-    private blogService m_service = new blogService();
     private String userName = "";
     private String password = "";
     private String newPassword = "";
@@ -36,8 +37,9 @@ public class changePassword extends ActionSupport {
         this.newPassword = newPassword;
     }
     public String execute() {
-        System.out.print(newPassword);
-        if (m_service.changePassword(userName, password, newPassword)) {
+        User t_user = DBUtil.queryUser(userName);
+        if (t_user != null && t_user.getPassword().equals(password)) {
+            DBUtil.updateUser(userName, password, "password", newPassword);
             return "success";
         }
         return "error";

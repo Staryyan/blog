@@ -30,6 +30,15 @@ public class Article {
         m_commentList = new ArrayList<>();
     }
 
+    public Article(int id, String author, Date date, String title, String description, String content) {
+        this.id = id;
+        this.author = author;
+        this.date = date;
+        this.title = title;
+        this.description = description;
+        this.content = content;
+    }
+
     public Article(String author, Date date, String title, String description, String content) {
         id = 0;
         this.author = author;

@@ -17,5 +17,11 @@
             <result name="success">/main_Signed.jsp</result>
             <result name="error">/main_unSigned.jsp</result>
         </action>
+        <action name="writeArticle" class="actions.writeArticle" method="execute">
+            <result name="success">/article.jsp</result>
+        </action>
+        <action name="listArticle" class="actions.listArticles" method="execute">
+            <result name="success">/article.jsp</result>
+        </action>
     </package>
 </struts>

@@ -60,14 +60,14 @@
             </ul>
             <a href="#!" class="center brand-logo" style="margin-left: 10px;">Stary's Blog</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Article</a></li>
+                <li><a href="listArticle.action">Article</a></li>
                 <li><a href="#">Discussion</a></li>
                 <li><a href="#">Write Article</a></li>
             </ul>
         </div>
     </nav>
     <!--Log in Operation-->
-    <form action="login.action">
+    <form action="login.action" method="post">
         <div id="modal-login" class="modal" style="width: 400px">
             <div class="modal-content">
                 <h4 style="text-align: center">Log in</h4>
@@ -81,19 +81,19 @@
         </div>
     </form>
     <!--Register Operation-->
-    <form action="/register.action">
+    <form action="/register.action" method="post">
         <div id="modal-register" class="modal" style="width: 400px">
             <div class="modal-content">
                 <h4 style="text-align: center">Register</h4>
                 <p>We will keep your information safe. Please trust us!</p>
-                <input name="t_user.userName" placeholder="User Name" required type="text" class="validate">
-                <input name="t_user.password" placeholder="password" required type="password" class="validate">
-                <input name="t_user.email" placeholder="email" required type="email" class="validate">
-                <input name="t_user.phone" placeholder="phone" required type="tel" class="validate">
+                <input name="m_user.userName" placeholder="User Name" required type="text" class="validate">
+                <input name="m_user.password" placeholder="password" required type="password" class="validate">
+                <input name="m_user.email" placeholder="email" required type="email" class="validate">
+                <input name="m_user.phone" placeholder="phone" required type="tel" class="validate">
             </div>
             <div class="modal-footer">
                 <input type="reset" value="Cancel" class="modal-action modal-close btn-flat">
-                <input type="submit" value="Agree" href="#!" class="btn-flat">
+                <input type="submit" value="Agree" class="btn-flat">
             </div>
         </div>
     </form>

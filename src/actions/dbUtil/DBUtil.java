@@ -4,12 +4,12 @@ package actions.dbUtil;
  * Created by yanzexin on 16/9/6.
  * All right reserved.
  */
+
+import beans.Article;
 import beans.User;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class DBUtil {
     private static String driverName = DBInfo.driverName;
@@ -17,14 +17,6 @@ public class DBUtil {
     private static String userName = DBInfo.userName;
     private static String userPwd = DBInfo.userPwd;
     private static Connection blogConnection = null;
-    public static DBUtil m_instance;
-
-    public static DBUtil getInstance() {
-        if (m_instance == null) {
-            m_instance = new DBUtil();
-        }
-        return m_instance;
-    }
 
     public DBUtil() {}
 
@@ -49,28 +41,137 @@ public class DBUtil {
             e.printStackTrace();
         }
     }
+    /**
+    * Query user with its userName;
+    * @param userName the name which will be queryed.
+    * @return User(could be null).
+            */
+    public static User queryUser(final String userName) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Users WHERE userName = ?");
+            ps.setString(1, userName);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new User(rs.getString("userName"), rs.getString("password"), rs.getString("email"), rs.getString("phone"));
+            }
+        } catch (Exception error) {
+            error.printStackTrace();
+            return null;
+        }
+        return null;
+    }
+
+    /**
+     * Insert User into Users without checking.
+     * @param user which will be inserted.
+     */
+    public static void insertUser(final User user) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO Users VALUES (?, ?, ?, ?)");
+            ps.setString(1, user.getUserName());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getEmail());
+            ps.setString(4, user.getPhone());
+            ps.execute();
+            closeDB();
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+    }
+
+    /**
+     * delete User from Users by its userName and password.
+     */
+    public void deleteUser(final String userName, final String password) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("DELETE FROM Users WHERE userName = ? AND password = ?");
+            ps.setString(1, userName);
+            ps.setString(2, password);
+            ps.execute();
+            closeDB();
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+    }
+
+    /**
+     * update User with field by its userName and password.
+     * @param userName check its profile.
+     * @param password check its profile.
+     * @param field which will be updated.
+     * @param newValue the new value.
+     */
+    public static void updateUser(String userName, String password, String field, String newValue) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("UPDATE Users SET " + field + " = ? WHERE userName = ? AND password = ?");
+            ps.setString(1, newValue);
+            ps.setString(2, userName);
+            ps.setString(3, password);
+            ps.execute();
+            closeDB();
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+    }
 
     /**
      * insert article into Articles.
      * @param article
      */
-//    public static void insertArticle(Article article) {
-//        try {
-//            openDB();
-//            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO Articles VALUES (?, ?, ?, ?, ?)");
-//            ps.setString(1, article.getAuthor());
-//            ps.setDate(2, article.getDate());
-//            ps.setString(3, article.getTitle());
-//            ps.setString(4, article.getDescription());
-//            ps.setString(5, article.getContent());
-//            ps.execute();
-//            article.getcommentList().forEach(DBUtil.insertArticleComment);
-//            closeDB();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public static void insertArticle(Article article) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO Articles(author, date, title, description, content) VALUES (?, ?, ?, ?, ?)");
+            ps.setString(1, article.getAuthor());
+            ps.setDate(2, article.getDate());
+            ps.setString(3, article.getTitle());
+            ps.setString(4, article.getDescription());
+            ps.setString(5, article.getContent());
+            ps.execute();
+            closeDB();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
+    /**
+     * List all articles from Database.
+     * @return the list of articles(could be null).
+     */
+    public static ArrayList<Article> listArticles() {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Articles");
+            ResultSet rs = ps.executeQuery();
+            ArrayList<Article> m_articles = new ArrayList<>();
+            while (rs.next()) {
+                m_articles.add(new Article(rs.getInt("id"), rs.getString("author"), rs.getDate("date"), rs.getString("title"), rs.getString("description"), rs.getString("content")));
+            }
+            return m_articles;
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+        return null;
+    }
+    public static Article queryArticle(int id) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Articles WHERE id = ?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new Article(rs.getString("author"), rs.getDate("date"), rs.getString("title"), rs.getString("description"), rs.getString("content"));
+            }
+            return null;
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+        return null;
+    }
     /**
      * delete Article from Articles only by author and specific title.
      */
@@ -150,79 +251,6 @@ public class DBUtil {
 //        }
 //    }
 
-    public static User existUser(final String userName, final String password) {
-        try {
-            openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Users WHERE userName = ? AND password = ?");
-            ps.setString(1, userName);
-            ps.setString(2, password);
-            ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-                return new User(rs.getString("userName"), rs.getString("password"), rs.getString("email"), rs.getString("phone"));
-            }
-        } catch (Exception error) {
-            error.printStackTrace();
-            return null;
-        }
-        return null;
-    }
-
-    /**
-     * insert User into Users
-     * @param user
-     */
-    public static void insertUser(final User user) {
-        try {
-            openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO Users VALUES (?, ?, ?, ?)");
-            ps.setString(1, user.getUserName());
-            ps.setString(2, user.getPassword());
-            ps.setString(3, user.getEmail());
-            ps.setString(4, user.getPhone());
-            ps.execute();
-            closeDB();
-        } catch (Exception error) {
-            error.printStackTrace();
-        }
-    }
-
-    /**
-     * delete User from Users by its userName and password.
-     * @param user
-     */
-    public void deleteUser(final User user) {
-        try {
-            openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("DELETE FROM Users WHERE userName = ? AND password = ?");
-            ps.setString(1, user.getUserName());
-            ps.setString(2, user.getPassword());
-            ps.execute();
-            closeDB();
-        } catch (Exception error) {
-            error.printStackTrace();
-        }
-    }
-
-    /**
-     * update User with field by its userName and password.
-     * @param userName check its profile.
-     * @param password check its profile.
-     * @param field which will be updated.
-     * @param newValue the new value.
-     */
-    public static void updateUser(String userName, String password, String field, String newValue) {
-        try {
-            openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("UPDATE Users SET " + field + " = ? WHERE userName = ? AND password = ?");
-            ps.setString(1, newValue);
-            ps.setString(2, userName);
-            ps.setString(3, password);
-            ps.execute();
-            closeDB();
-        } catch (Exception error) {
-            error.printStackTrace();
-        }
-    }
 
     /**
      * read data from Discussions.

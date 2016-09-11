@@ -1,5 +1,6 @@
 package actions;
 
+import actions.dbUtil.DBUtil;
 import beans.User;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -8,23 +9,24 @@ import com.opensymphony.xwork2.ActionSupport;
  * All right reserved.
  */
 public class registerAction extends ActionSupport {
-    private blogService m_service = new blogService();
-    private User t_user = new User();
+    private User m_user = new User();
 
-    public User getT_user() {
-        return t_user;
+    public User getM_user() {
+        return m_user;
     }
 
-    public void setT_user(User t_user) {
-        this.t_user = t_user;
+    public void setM_user(User m_user) {
+        this.m_user = m_user;
     }
 
     public registerAction() {
-
     }
     public String execute() {
-        System.out.println(t_user.getUserName());
-        if (m_service.register(t_user.getUserName(), t_user.getPassword(), t_user.getEmail(), t_user.getPhone())) {
+        System.out.println(m_user.getUserName());
+        User t_user = DBUtil.queryUser(m_user.getUserName());
+        if (t_user == null) {
+            DBUtil.insertUser(m_user);
+            System.out.print(DBUtil.queryUser(m_user.getUserName()));
             return "success";
         }
         return "error";

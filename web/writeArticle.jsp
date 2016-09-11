@@ -1,36 +1,15 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="beans.Article" %>
-<html>
+<%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Title</title>
-    <style type="text/css">
-        /* fallback */
-        @font-face {
-            font-family: 'Material Icons';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Material Icons'), local('MaterialIcons-Regular'),
-            url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
-        }
-
-        .material-icons {
-            font-family: 'Material Icons';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            line-height: 1;
-            letter-spacing: normal;
-            text-transform: none;
-            display: inline-block;
-            white-space: nowrap;
-            word-wrap: normal;
-            direction: ltr;
-            -webkit-font-feature-settings: 'liga';
-            -webkit-font-smoothing: antialiased;
-        }
-    </style>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <link rel="stylesheet" href="editor.md-master/css/editormd.css" />
     <script type="text/javascript" src="materialize/jquery-3.1.0.min.js"></script>
     <%
         Cookie[] cookies = request.getCookies();
@@ -54,6 +33,7 @@
     </script>
 </head>
 <body>
+
 <div class="container">
     <nav>
         <div class="nav-wrapper">
@@ -69,12 +49,13 @@
             </ul>
             <a href="#!" class="center brand-logo">Stary's Blog</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="listArticle.action">Article</a></li>
+                <li><a href="#">Article</a></li>
                 <li><a href="#">Discussion</a></li>
                 <li><a href="writeArticle.jsp">Write Article</a></li>
             </ul>
         </div>
     </nav>
+
     <!--Log in Operation-->
     <form action="changePassword.action">
         <div id="modal-changePassword" class="modal" style="width: 400px">
@@ -91,30 +72,42 @@
         </div>
     </form>
 
-    <div style="position: fixed; bottom: 90px; right: 30px;">
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-    </div>
 
-    <ul class="collapsible popout" data-collapsible="accordion" style="margin-top: 40px;">
-            <%
-                ArrayList<Article> m_articles = (ArrayList<Article>) session.getAttribute("list");
-                if (m_articles != null && m_articles.size() != 0) {
-                    for (Article each : m_articles) {
-                    %>
-            <li>
-            <div class="collapsible-header"><i class="material-icons">filter_drama</i><%=each.getTitle()%></div>
-            <div class="collapsible-body"><p><%=each.getDescription()%></p>
-                <a class="btn waves-effect waves-light" type="submit" href="readArticle.jsp?id=<%=each.getId()%>" style="margin: 10px; position: relative; bottom: 10px; left: 10px;">
-                    <i class="material-icons left">visibility</i>Read more!
-                </a>
+    <div class="row" style="margin-top: 40px;">
+        <form class="col s12" action="writeArticle.action" method="post">
+            <div class="row">
+            <div class="input-field col s6">
+                <input name="m_article.author" id="author" value="<%=userName%>" required type="text" class="validate">
+                <label for="author">author</label>
             </div>
-            </li>
-            <%
-                    }
-                }
-            %>
-    </ul>
-
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="m_article.date" id="date" value="" required type="date" class="validate">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="m_article.title" id="title" required type="text" class="validate">
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="m_article.description" id="description" type="text" required class="validate">
+                <label for="description">Description</label>
+            </div>
+        </div>
+        <div class="row">
+        <div id="test-editormd">
+            <textarea style="display:none;" name="m_article.content"></textarea>
+        </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right">Finish!
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>
 </div>
 <footer class="page-footer">
     <div class="container">
@@ -131,8 +124,27 @@
         </div>
     </div>
 </footer>
+
+<script src="editor.md-master/examples/js/jquery.min.js"></script>
+<script src="editor.md-master/editormd.js"></script>
+<script type="text/javascript">
+    var testEditor;
+    $(function() {
+        // You can custom @link base url.
+        editormd.urls.atLinkBase = "https://github.com/";
+
+        testEditor = editormd("test-editormd", {
+            width     : "90%",
+            height    : 720,
+            toc       : true,
+            //atLink    : false,    // disable @link
+            //emailLink : false,    // disable email address auto link
+            todoList  : true,
+            path      : 'editor.md-master/lib/'
+        });
+    });
+</script>
 <!--  Scripts-->
-<script src="materialize/jquery-3.1.0.min.js"></script>
 <script src="materialize/js/materialize.js"></script>
 <script src="materialize/js/materialize.min.js"></script>
 </body>
