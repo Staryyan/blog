@@ -47,7 +47,7 @@
                     <li><a href="main_unSigned.jsp">Sign out</a></li>
                 </ul>
             </ul>
-            <a href="#!" class="center brand-logo">Stary's Blog</a>
+            <a href="#" class="center brand-logo">Stary's Blog</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Article</a></li>
                 <li><a href="#">Discussion</a></li>
@@ -83,7 +83,7 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <input name="m_article.date" id="date" value="" required type="date" class="validate">
+                <input name="m_article.date" type="date" class="validate">
             </div>
         </div>
         <div class="row">

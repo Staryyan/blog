@@ -13,14 +13,14 @@
       <table id="4" parent="1" name="DiscussionComments"/>
       <table id="5" parent="1" name="Discussions"/>
       <table id="6" parent="1" name="Users"/>
-      <column id="7" parent="2" name="title">
+      <column id="7" parent="2" name="id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="8" parent="2" name="author">
         <data-type>char(40)</data-type>
       </column>
-      <column id="8" parent="2" name="date">
+      <column id="9" parent="2" name="date">
         <data-type>date</data-type>
-      </column>
-      <column id="9" parent="2" name="author">
-        <data-type>char(40)</data-type>
       </column>
       <column id="10" parent="2" name="content">
         <data-type>longtext</data-type>

@@ -1,5 +1,7 @@
 <%@ page import="beans.Article" %>
 <%@ page import="actions.dbUtil.DBUtil" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="beans.ArticleComment" %>
 <html>
 <head>
     <title>Title</title>
@@ -47,14 +49,14 @@
 		boolean flag = false;
 		for (Cookie each : cookies) {
 		if (each.getName().equals("userName") && each.getValue() != null) {
-		userName = each.getValue();
-		flag = true;
+		    userName = each.getValue();
+		    flag = true;
 		}
-		System.out.print(each.getValue());
+		    System.out.print(each.getValue());
 		}
 		if (!flag) {
-		response.sendRedirect("main_unSigned.jsp");
-		}
+		    response.sendRedirect("main_unSigned.jsp");
+		    }
 		%>
 	<script>
 	$(document).ready(function () {
@@ -64,6 +66,7 @@
 	<%
 		int id = Integer.parseInt(request.getParameter("id"));
 		Article m_article = DBUtil.queryArticle(id);
+        ArrayList<ArticleComment> m_comments = DBUtil.queryArticleComments(id);
 	%>
 </head>
 <body>
@@ -107,7 +110,8 @@
 
 
     <div style="position: fixed; bottom: 90px; right: 30px;">
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="large material-icons">mode_edit</i></a>
+        <!-- Modal Trigger -->
+        <a class="btn-floating btn-large waves-effect red modal-trigger" href="#modal1"><i class="large material-icons">mode_edit</i></a>
     </div>
 
     <h2 class="header"><%=m_article.getTitle()%></h2>
@@ -116,9 +120,42 @@
     <h5><i class="material-icons left">info_outline</i><small>Description:</small><%=m_article.getDescription()%></h5>
     <hr>
     <div id="test-editormd-view2">
-        <textarea id="append-test" style="display:none;"><%=m_article.getContent()%></textarea>
+        <textarea style="display:none;"><%=m_article.getContent()%></textarea>
     </div>
-	
+
+    <hr />
+    <h2 class="header">Comments</h2>
+    <%
+        for (ArticleComment each : m_comments) { %>
+        <h5><i class="material-icons left">perm_identity</i><small>Author:</small><%=each.getAuthor()%></h5>
+        <h5><i class="material-icons left">perm_identity</i><small>Date:</small><%=each.getDate()%></h5>
+            <p><%=m_article.getContent()%></p>
+        <hr />
+    <%
+        }
+    %>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+        <form action="insertArticleComment.action" method="post">
+            <div class="modal-content" style="width: 800px; margin-left: auto; margin-right: auto;">
+                <h4 style="text-align: center">Comment</h4>
+                <i class="material-icons prefix">mode_edit</i>
+                <label for="textarea1">Content</label>
+                <textarea name="content" id="textarea1" class="materialize-textarea"></textarea>
+                <input name="author" value="<%=userName%>">
+                <input name="id" value="<%=m_article.getId()%>">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
 </div>
 <footer class="page-footer">
     <div class="container">

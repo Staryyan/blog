@@ -7,24 +7,33 @@ import java.sql.Date;
  * All right reserved.
  */
 public class ArticleComment {
+    private int id;
     private String author;
     private Date date;
     private String content;
-    private String title;
 
-    public String getTitle() {
-        return title;
+    public ArticleComment() {
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public ArticleComment(String author, Date date, String title, String content) {
+    public ArticleComment(int id, String author, Date date, String content) {
+        this.id = id;
         this.author = author;
         this.date = date;
         this.content = content;
-        this.title = title;
+    }
+
+    public ArticleComment(String author, Date date, String content) {
+        this.author = author;
+        this.date = date;
+        this.content = content;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getAuthor() {
@@ -50,5 +59,4 @@ public class ArticleComment {
     public void setContent(String content) {
         this.content = content;
     }
-
 }

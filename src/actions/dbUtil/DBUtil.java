@@ -6,6 +6,7 @@ package actions.dbUtil;
  */
 
 import beans.Article;
+import beans.ArticleComment;
 import beans.User;
 
 import java.sql.*;
@@ -164,7 +165,7 @@ public class DBUtil {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                return new Article(rs.getString("author"), rs.getDate("date"), rs.getString("title"), rs.getString("description"), rs.getString("content"));
+                return new Article(rs.getInt("id"), rs.getString("author"), rs.getDate("date"), rs.getString("title"), rs.getString("description"), rs.getString("content"));
             }
             return null;
         } catch (Exception error) {
@@ -219,21 +220,42 @@ public class DBUtil {
      * ArticleComment can't be updated.
      * @param comment
      */
-//    public static void insertArticleComment(ArticleComment comment) {
-//        try {
-//            openDB();
-//            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO ArticleComments VALUES (?, ?, ?, ?)");
-//            ps.setString(1, comment.getAuthor());
-//            ps.setDate(2, comment.getDate());
-//            ps.setString(3, comment.getTitle());
-//            ps.setString(4, comment.getContent());
-//            ps.execute();
-//            closeDB();
-//        } catch (Exception error) {
-//            error.printStackTrace();
-//        }
-//    }
+    public static void insertArticleComment(ArticleComment comment) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO ArticleComments VALUES (?, ?, ?, ?)");
+            ps.setInt(1, comment.getId());
+            ps.setString(2, comment.getAuthor());
+            ps.setDate(3, comment.getDate());
+            ps.setString(4, comment.getContent());
+            ps.execute();
+            closeDB();
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+    }
 
+    /**
+     * Query ArticleComment's list with its id.
+     * @param id the primary key.
+     * @return  the comment list.
+     */
+    public static ArrayList<ArticleComment> queryArticleComments(int id) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM ArticleComments WHERE id = ?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            ArrayList<ArticleComment> list = new ArrayList<>();
+            while (rs.next()) {
+                list.add(new ArticleComment(rs.getInt("id"), rs.getString("author"), rs.getDate("date"), rs.getString("content")));
+            }
+            return list;
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+        return null;
+    }
     /**
      * delete ArticleComment by specific title.
      */

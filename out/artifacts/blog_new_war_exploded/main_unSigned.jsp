@@ -62,7 +62,7 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="listArticle.action">Article</a></li>
                 <li><a href="#">Discussion</a></li>
-                <li><a href="#">Write Article</a></li>
+                <li><a href="writeArticle.jsp">Write Article</a></li>
             </ul>
         </div>
     </nav>

@@ -1,7 +1,6 @@
 package beans;
 
 import java.sql.Date;
-import java.util.ArrayList;
 
 /**
  * Created by yanzexin on 16/9/6.
@@ -18,7 +17,6 @@ public class Article {
     private String title;
     private String description;
     private String content;
-    private ArrayList<beans.ArticleComment> m_commentList;
 
     public Article() {
         id = 0;
@@ -27,7 +25,6 @@ public class Article {
         title = "";
         description = "";
         content = "";
-        m_commentList = new ArrayList<>();
     }
 
     public Article(int id, String author, Date date, String title, String description, String content) {
@@ -46,7 +43,6 @@ public class Article {
         this.date = date;
         this.description = description;
         this.content = content;
-        m_commentList = new ArrayList<>();
     }
 
     public int getId() {
@@ -97,19 +93,4 @@ public class Article {
         this.content = content;
     }
 
-    public void insertComment(ArticleComment comment) {
-        m_commentList.add(comment);
-    }
-
-    public void deleteComment(ArticleComment comment) {
-        m_commentList.remove(comment);
-    }
-
-    public ArrayList<ArticleComment> getcommentList() {
-        return m_commentList;
-    }
-
-    public void setcommentList(ArrayList<ArticleComment> m_commentList) {
-        this.m_commentList = m_commentList;
-    }
 }
