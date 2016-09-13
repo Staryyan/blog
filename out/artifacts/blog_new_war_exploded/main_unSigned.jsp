@@ -33,27 +33,112 @@
     <%
         Cookie[] cookies = request.getCookies();
         String userName = "";
-        boolean flag = false;
         for (Cookie each : cookies) {
             if (each.getName().equals("userName") && each.getValue() != null) {
-                flag = true;
+                userName = each.getValue();
             }
-        }
-        if (flag) {
-            response.addCookie(new Cookie("userName", null));
         }
     %>
     <script>
         $(document).ready(function () {
             $('.modal-trigger').leanModal();
+            $("#userName").blur(function () {
+                var url = "checkuserName";
+                var params = {
+                    userName:$("#userName").val()
+                };
+                $.ajax({
+                    url:url,
+                    type:'POST',
+                    data:params,
+                    async: false,
+                    success:function (data) {
+                        var Data = eval("("+data+")");
+                        if (Data["error"]) {
+                            document.getElementById("result").innerHTML = "<p style='color: red'>"+ Data["info"] + "</p>";
+                        } else {
+                            document.getElementById("result").innerHTML = "<p style='color: green'>" + Data["info"] + "</p>";
+                        }
+                    },
+                    error:function () {
+                    }
+                });
+            });
+            $("#btn").click(function () {
+                var url = "register";
+                var params = {
+                    userName:$("#userName").val(),
+                    password:$("#password").val(),
+                    email:$("#email").val(),
+                    phone:$("#phone").val()
+                };
+                $.ajax({
+                    url:url,
+                    type:'POST',
+                    data:params,
+                    async: false,
+                    success:function (data) {
+                        var Data = eval("("+data+")");
+                        if (Data["error"]) {
+                            Materialize.toast("Register failed!", 2000);
+                        } else {
+                            Materialize.toast('Register succeed!', 2000);
+                            $('#modal-register').closeModal();
+                        }
+                    },
+                    error:function (XML) {
+                        alert(XML.responseText);
+                    }
+                });
+            });
+            $("#logIn").click(function () {
+                var url = "login";
+                var params = {
+                    userName:$("#l_userName").val(),
+                    password:$("#l_password").val()
+                };
+                $.ajax({
+                    url:url,
+                    tyep:'POST',
+                    data:params,
+                    async:false,
+                    success:function (data) {
+                        var Data = eval("("+data+")");
+                        if (Data["error"]) {
+                            Materialize.toast(Data["info"], 2000);
+                        } else {
+                            Materialize.toast('Log in succeed!', 2000);
+                            $('#modal-login').closeModal();
+//                            SignIn();
+                        }
+                    },
+                    error:function (XML) {
+                        alert(XML.responseText);
+                    }
+                });
+            });
+            $("#cancel").click(function () {
+               document.getElementById("result").innerHTML = "";
+            });
+            function SignIn() {
+                <%--var userName = <%=userName%>;--%>
+                <%--if (userName == "") {--%>
+                    <%--$(this)--%>
+                <%--} else {--%>
+<%--//                    $("#nav").innerHTML = "<div class=\"nav-wrapper\"><ul class=\"left hide-on-med-and-down\"><li><a class=\"modal-trigger\" href=\"#modal-login\">Log in</a></li> <li><a class=\"modal-trigger\" href=\"#modal-register\">Register</a></li> </ul> <a href=\"#!\" class=\"center brand-logo\" style=\"margin-left: 10px;\">Stary's Blog</a> <ul class=\"right hide-on-med-and-down\"> <li><a href=\"listArticle.action\">Article</a></li> <li><a href=\"#\">Discussion</a></li> <li><a href=\"writeArticle.jsp\">Write Article</a></li></ul></div>"--%>
+<%--//                    $("#profile").removeChild();--%>
+<%--//                    $("#profile").appendChild("<li>Test</li>");--%>
+                <%--}--%>
+
+            }
         });
     </script>
 </head>
 <body>
 <div class="container">
-    <nav>
+    <nav id="nav">
         <div class="nav-wrapper">
-            <ul class="left hide-on-med-and-down">
+            <ul id="profile" class="left hide-on-med-and-down">
                 <!-- Dropdown Trigger -->
                 <li><a class="modal-trigger" href="#modal-login">Log in</a></li>
                 <li><a class="modal-trigger" href="#modal-register">Register</a></li>
@@ -67,37 +152,33 @@
         </div>
     </nav>
     <!--Log in Operation-->
-    <form action="login.action" method="post">
         <div id="modal-login" class="modal" style="width: 400px">
             <div class="modal-content">
                 <h4 style="text-align: center">Log in</h4>
-                <input name="userName" placeholder="User Name" required type="text" class="validate">
-                <input name="password" placeholder="password" required type="password" class="validate">
+                <input id="l_userName" placeholder="User Name" required type="text" class="validate">
+                <input id="l_password" placeholder="password" required type="password" class="validate">
             </div>
             <div class="modal-footer">
                 <input type="reset" value="Cancel" class="modal-action modal-close btn-flat">
-                <input type="submit" value="Log in" class=" btn-flat">
+                <input id="logIn" type="submit" value="Log in" class=" btn-flat">
             </div>
         </div>
-    </form>
     <!--Register Operation-->
-    <form action="/register.action" method="post">
         <div id="modal-register" class="modal" style="width: 400px">
             <div class="modal-content">
                 <h4 style="text-align: center">Register</h4>
                 <p>We will keep your information safe. Please trust us!</p>
-                <input name="m_user.userName" placeholder="User Name" required type="text" class="validate">
-                <input name="m_user.password" placeholder="password" required type="password" class="validate">
-                <input name="m_user.email" placeholder="email" required type="email" class="validate">
-                <input name="m_user.phone" placeholder="phone" required type="tel" class="validate">
+                <input  id="userName"  placeholder="User Name" required type="text" class="validate">
+                <p id="result"></p>
+                <input id="password" placeholder="password" required type="password" class="validate">
+                <input id="email" placeholder="email" required type="email" class="validate">
+                <input id="phone" placeholder="phone" required type="tel" class="validate">
             </div>
             <div class="modal-footer">
-                <input type="reset" value="Cancel" class="modal-action modal-close btn-flat">
-                <input type="submit" value="Agree" class="btn-flat">
+                <input id="cancel" type="reset" value="Cancel" class="modal-action modal-close btn-flat">
+                <input id="btn" type="submit" value="Agree" class="btn-flat">
             </div>
         </div>
-    </form>
-
     <h1 class="header center red-text">Stary's blog</h1>
     <div class="row-center">
         <h5 class="header col s12 light" style="text-align: center">An interesting blog, but more than a blog, based on Material Design.</h5>

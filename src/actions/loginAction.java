@@ -3,6 +3,7 @@ package actions;
 import actions.dbUtil.DBUtil;
 import beans.User;
 import com.opensymphony.xwork2.ActionSupport;
+import net.sf.json.JSONObject;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.Cookie;
@@ -12,8 +13,17 @@ import javax.servlet.http.Cookie;
  * All right reserved.
  */
 public class loginAction extends ActionSupport {
-    private String userName;
-    private String password;
+    private String userName = "";
+    private String password = "";
+    private String result = "";
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
 
     public String getUserName() {
         return userName;
@@ -35,11 +45,21 @@ public class loginAction extends ActionSupport {
     }
     public String execute() {
         User t_user = DBUtil.queryUser(userName);
-        if (t_user != null && t_user.getPassword().equals(password)) {
-            Cookie cookie = new Cookie("userName", t_user.getUserName());
-            ServletActionContext.getResponse().addCookie(cookie);
-            return "success";
+        JSONObject jsonObject = new JSONObject();
+        if (t_user != null) {
+            if (t_user.getPassword().equals(password)) {
+                Cookie cookie = new Cookie("userName", t_user.getUserName());
+                ServletActionContext.getResponse().addCookie(cookie);
+                jsonObject.put("error", false);
+            } else {
+                jsonObject.put("error", true);
+                jsonObject.put("info", "Wrong Password!");
+            }
+        } else {
+            jsonObject.put("error", true);
+            jsonObject.put("info", "Don't exist userName!");
         }
-        return "error";
+        result = jsonObject.toString();
+        return "success";
     }
 }

@@ -54,9 +54,9 @@
 		}
 		    System.out.print(each.getValue());
 		}
-		if (!flag) {
-		    response.sendRedirect("main_unSigned.jsp");
-		    }
+//		if (!flag) {
+//		    response.sendRedirect("main_unSigned.jsp");
+//		    }
 		%>
 	<script>
 	$(document).ready(function () {

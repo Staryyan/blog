@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="ezmorph">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Java-lib/ezmorph.jar!/" />
+      <root url="file://$USER_HOME$/Java-lib/commons-all" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Java-lib/commons-all" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Java-lib/commons-all" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Java-lib/commons-all" recursive="false" type="SOURCES" />
+  </library>
+</component>

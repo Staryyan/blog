@@ -15,6 +15,7 @@
           <fileset id="s2fileset" name="Default File Set " removed="false">
             <file>file://$MODULE_DIR$/src/struts.xml</file>
             <file>jar://$MODULE_DIR$/lib/struts2-core.jar!/struts-default.xml</file>
+            <file>jar://$MODULE_DIR$/lib/struts2-json-plugin-2.2.3.jar!/struts-plugin.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
@@ -32,5 +33,8 @@
     <orderEntry type="library" name="Struts 2-2.3.20.1" level="project" />
     <orderEntry type="library" name="junit-4.12" level="project" />
     <orderEntry type="library" name="servlet" level="project" />
+    <orderEntry type="library" name="ezmorph" level="project" />
+    <orderEntry type="library" name="struts2-json-plugin-2.2.3" level="project" />
+    <orderEntry type="library" name="json-lib-2.4-jdk15" level="project" />
   </component>
 </module>
