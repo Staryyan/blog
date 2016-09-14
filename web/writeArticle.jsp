@@ -5,63 +5,146 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">--%>
     <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <link rel="stylesheet" href="editor.md-master/css/editormd.css" />
     <script type="text/javascript" src="materialize/jquery-3.1.0.min.js"></script>
-    <%
-        Cookie[] cookies = request.getCookies();
-        String userName = "";
-        boolean flag = false;
-        for (Cookie each : cookies) {
-            if (each.getName().equals("userName") && each.getValue() != null) {
-                userName = each.getValue();
-                flag = true;
-            }
-            System.out.print(each.getValue());
-        }
-//        if (!flag) {
-//            response.sendRedirect("main_unSigned.jsp");
-//        }
-    %>
     <script>
         $(document).ready(function () {
+            Signed();
             $('.modal-trigger').leanModal();
+            $("#userName").blur(function () {
+                var url = "checkuserName";
+                var params = {
+                    userName:$("#userName").val()
+                };
+                $.ajax({
+                    url:url,
+                    type:'POST',
+                    data:params,
+                    async: false,
+                    success:function (data) {
+                        var Data = eval("("+data+")");
+                        if (Data["error"]) {
+                            document.getElementById("result").innerHTML = "<p style='color: red'>"+ Data["info"] + "</p>";
+                        } else {
+                            document.getElementById("result").innerHTML = "<p style='color: green'>" + Data["info"] + "</p>";
+                        }
+                    },
+                    error:function () {
+                    }
+                });
+            });
+            $("#btn").click(function () {
+                var url = "register";
+                var params = {
+                    userName:$("#userName").val(),
+                    password:$("#password").val(),
+                    email:$("#email").val(),
+                    phone:$("#phone").val()
+                };
+                $.ajax({
+                    url:url,
+                    type:'POST',
+                    data:params,
+                    async: false,
+                    success:function (data) {
+                        var Data = eval("("+data+")");
+                        if (Data["error"]) {
+                            Materialize.toast("Register failed!", 2000);
+                        } else {
+                            Materialize.toast('Register succeed!', 2000);
+                            $('#modal-register').closeModal();
+                        }
+                    },
+                    error:function (XML) {
+                        alert(XML.responseText);
+                    }
+                });
+            });
+            $("#logIn").click(function () {
+                var url = "login";
+                var params = {
+                    userName:$("#l_userName").val(),
+                    password:$("#l_password").val()
+                };
+                $.ajax({
+                    url:url,
+                    tyep:'POST',
+                    data:params,
+                    async:false,
+                    success:function (data) {
+                        var Data = eval("("+data+")");
+                        if (Data["error"]) {
+                            Materialize.toast(Data["info"], 2000);
+                        } else {
+                            Materialize.toast('Log in succeed!', 2000);
+                            $('#modal-login').closeModal();
+                            Signed();
+                        }
+                    },
+                    error:function (XML) {
+                        alert(XML.responseText);
+                    }
+                });
+            });
+            $("#cancel").click(function () {
+                document.getElementById("result").innerHTML = "";
+            });
         });
+
+        function Signed() {
+            var url = "signed";
+            var params = {
+                none:""
+            };
+            $.ajax({
+                url:url,
+                type:'POST',
+                data:params,
+                async:false,
+                success:function (data) {
+                    var Data = eval("("+data+")");
+                    var profile = $("#profile");
+                    if (!Data["signed"]) {
+                        profile.empty();
+                        profile.append("<li><a class='modal-trigger' href='#modal-login'>Log in</a></li>");
+                        profile.append("<li><a class='modal-trigger' href='#modal-register'>Register</a></li>");
+                    } else {
+                        profile.empty();
+                        profile.append("<li><a onclick='Profile()' style='margin-left:20px; margin-right:20px;'>"+ Data["userName"] +"</a></li>");
+                        document.getElementById("author").value = Data["userName"];
+                    }
+                }
+            });
+        }
+        function Profile() {
+            $("#modal-profile").openModal();
+        }
     </script>
 </head>
 <body>
-
 <div class="container">
     <nav>
         <div class="nav-wrapper">
-            <ul class="left hide-on-med-and-down">
-                <!-- Dropdown Trigger -->
-                <li><a id="name" class="dropdown-button" href="#" data-activates="profile"><%=userName%><i class="material-icons right">arrow_drop_down</i></a></li>
-                <ul id='profile' class='dropdown-content'>
-                    <li><a href="#modal-changePassword" class="modal-trigger">Change Password</a></li>
-                    <li><a>Feedback.</a></li>
-                    <li class="divider"></li>
-                    <li><a href="main_unSigned.jsp">Sign out</a></li>
-                </ul>
+            <ul id="profile" class="right hide-on-med-and-down">
             </ul>
-            <a href="#" class="center brand-logo">Stary's Blog</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Article</a></li>
+            <a href="#!" class="center brand-logo" style="margin-left: 10px;">Stary's Blog</a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="listArticle.action">Article</a></li>
                 <li><a href="#">Discussion</a></li>
                 <li><a href="writeArticle.jsp">Write Article</a></li>
             </ul>
         </div>
     </nav>
-
     <!--Log in Operation-->
     <form action="changePassword.action">
         <div id="modal-changePassword" class="modal" style="width: 400px">
             <div class="modal-content">
                 <h4 style="text-align: center">Change Password</h4>
-                <input name="userName" value="<%=userName%>" placeholder="User Name" required type="text" class="validate">
+                <input name="userName" value="yes" placeholder="User Name" required type="text" class="validate">
                 <input name="password" placeholder="password" required type="password" class="validate">
                 <input name="newPassword" placeholder="new Password" required type="password" class="validate">
             </div>
@@ -71,19 +154,51 @@
             </div>
         </div>
     </form>
+    <!--Log in Operation-->
+    <div id="modal-login" class="modal" style="width: 400px">
+        <div class="modal-content">
+            <h4 style="text-align: center">Log in</h4>
+            <input id="l_userName" placeholder="User Name" required type="text" class="validate">
+            <input id="l_password" placeholder="password" required type="password" class="validate">
+        </div>
+        <div class="modal-footer">
+            <input type="reset" value="Cancel" class="modal-action modal-close btn-flat">
+            <input id="logIn" type="submit" value="Log in" class=" btn-flat">
+        </div>
+    </div>
+    <!--Register Operation-->
+    <div id="modal-register" class="modal" style="width: 400px">
+        <div class="modal-content">
+            <h4 style="text-align: center">Register</h4>
+            <p>We will keep your information safe. Please trust us!</p>
+            <input  id="userName"  placeholder="User Name" required type="text" class="validate">
+            <p id="result"></p>
+            <input id="password" placeholder="password" required type="password" class="validate">
+            <input id="email" placeholder="email" required type="email" class="validate">
+            <input id="phone" placeholder="phone" required type="tel" class="validate">
+        </div>
+        <div class="modal-footer">
+            <input id="cancel" type="reset" value="Cancel" class="modal-action modal-close btn-flat">
+            <input id="btn" type="submit" value="Agree" class="btn-flat">
+        </div>
+    </div>
+    <!--Profile Operation-->
+    <div id="modal-profile" class="modal" style="width: 400px">
+        <div class="modal-content">
+            <h4 style="text-align: center">Profile Operation</h4>
+            <%--<input type="button" class="btn-flat" value="Change Password">--%>
+            <%--<input type="button" class="btn-flat" value="Feedback!">--%>
+            <%--<input type="button" class="btn-flat" value="Sign Out!">--%>
+        </div>
+    </div>
 
 
     <div class="row" style="margin-top: 40px;">
         <form class="col s12" action="writeArticle.action" method="post">
             <div class="row">
             <div class="input-field col s6">
-                <input name="m_article.author" id="author" value="<%=userName%>" required type="text" class="validate">
+                <input name="m_article.author" id="author" value="" required type="text" class="validate">
                 <label for="author">author</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
-                <input name="m_article.date" type="date" class="validate">
             </div>
         </div>
         <div class="row">
