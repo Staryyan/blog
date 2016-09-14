@@ -41,9 +41,9 @@
             }
             System.out.print(each.getValue());
         }
-        if (!flag) {
-            response.sendRedirect("main_unSigned.jsp");
-        }
+//        if (!flag) {
+//            response.sendRedirect("main_unSigned.jsp");
+//        }
     %>
     <script>
         $(document).ready(function () {
@@ -57,13 +57,14 @@
         <div class="nav-wrapper">
             <ul class="left hide-on-med-and-down">
                 <!-- Dropdown Trigger -->
-                <li><a id="name" class="dropdown-button" href="#" data-activates="profile"><%=userName%><i class="material-icons right">arrow_drop_down</i></a></li>
-                <ul id='profile' class='dropdown-content'>
-                    <li><a href="#modal-changePassword" class="modal-trigger">Change Password</a></li>
-                    <li><a>Feedback.</a></li>
-                    <li class="divider"></li>
-                    <li><a href="main_unSigned.jsp">Sign out</a></li>
-                </ul>
+                <li><a class="dropdown-button" href="#" data-activates="profile"><%=userName%><i class="material-icons right">arrow_drop_down</i></a>
+                    <ul id='profile' class='dropdown-content'>
+                        <li><a href="#modal-changePassword" class="modal-trigger">Change Password</a></li>
+                        <li><a>Feedback.</a></li>
+                        <li class="divider"></li>
+                        <li><a href="main_unSigned.jsp">Sign out</a></li>
+                    </ul>
+                </li>
             </ul>
             <a href="#!" class="center brand-logo">Stary's Blog</a>
             <ul class="right hide-on-med-and-down">

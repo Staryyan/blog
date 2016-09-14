@@ -32,7 +32,7 @@
     <script type="text/javascript" src="materialize/jquery-3.1.0.min.js"></script>
     <%
         Cookie[] cookies = request.getCookies();
-        String userName = "";
+        String userName = "yes";
         for (Cookie each : cookies) {
             if (each.getName().equals("userName") && each.getValue() != null) {
                 userName = each.getValue();
@@ -109,7 +109,6 @@
                         } else {
                             Materialize.toast('Log in succeed!', 2000);
                             $('#modal-login').closeModal();
-//                            SignIn();
                         }
                     },
                     error:function (XML) {
@@ -120,17 +119,6 @@
             $("#cancel").click(function () {
                document.getElementById("result").innerHTML = "";
             });
-            function SignIn() {
-                <%--var userName = <%=userName%>;--%>
-                <%--if (userName == "") {--%>
-                    <%--$(this)--%>
-                <%--} else {--%>
-<%--//                    $("#nav").innerHTML = "<div class=\"nav-wrapper\"><ul class=\"left hide-on-med-and-down\"><li><a class=\"modal-trigger\" href=\"#modal-login\">Log in</a></li> <li><a class=\"modal-trigger\" href=\"#modal-register\">Register</a></li> </ul> <a href=\"#!\" class=\"center brand-logo\" style=\"margin-left: 10px;\">Stary's Blog</a> <ul class=\"right hide-on-med-and-down\"> <li><a href=\"listArticle.action\">Article</a></li> <li><a href=\"#\">Discussion</a></li> <li><a href=\"writeArticle.jsp\">Write Article</a></li></ul></div>"--%>
-<%--//                    $("#profile").removeChild();--%>
-<%--//                    $("#profile").appendChild("<li>Test</li>");--%>
-                <%--}--%>
-
-            }
         });
     </script>
 </head>
@@ -141,7 +129,8 @@
             <ul id="profile" class="left hide-on-med-and-down">
                 <!-- Dropdown Trigger -->
                 <li><a class="modal-trigger" href="#modal-login">Log in</a></li>
-                <li><a class="modal-trigger" href="#modal-register">Register</a></li>
+                <li><a  class="modal-trigger" href="#modal-register">Register</a></li>
+                <li><a id="name"></a></li>
             </ul>
             <a href="#!" class="center brand-logo" style="margin-left: 10px;">Stary's Blog</a>
             <ul class="right hide-on-med-and-down">
