@@ -41,5 +41,10 @@
                 <param name="root">result</param>
             </result>
         </action>
+        <action name="findPassword" class="actions.findPassword" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 </struts>

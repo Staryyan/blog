@@ -58,11 +58,30 @@
                 <input type="checkbox" id="Remember-me" />
                 <label for="Remember-me">Remember me!</label>
             </p>
-            <a>Forget your password?</a>
+            <a  class="modal-trigger" href="#modal-forget">Forget your password?</a>
         </div>
         <div class="modal-footer">
             <input type="reset" value="Cancel" class="modal-action modal-close btn-flat">
             <input id="logIn" type="submit" value="Log in" class=" btn-flat">
+        </div>
+    </div>
+        <%-- Find Password!--%>
+    <div id="modal-forget" class="modal">
+        <div class="modal-content">
+            <h4>Find your password!</h4>
+            <p>We will send you an email to reset your password! Please input your original email to reset your password.</p>
+            <div class="input-field col s6">
+                <input id="p_userName" required type="text" class="validate">
+                <label for="p_userName">User Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="p_email" required type="email" class="validate">
+                <label for="p_email">Email</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input type="reset" value="Cancel" class="modal-action modal-close btn-flat">
+            <input id="reset_password" type="submit" value="Submit" class="btn-flat">
         </div>
     </div>
     <!--Register Operation-->

@@ -130,6 +130,28 @@ $(document).ready(function () {
             }
         });
     });
+    $("#reset_password").click(function () {
+        var url="findPassword";
+        var params = {
+            userName:$("#p_userName").val(),
+            email:$("#p_email").val()
+        };
+        $.ajax({
+            url:url,
+            type:'POST',
+            data:params,
+            async:false,
+            success:function (data) {
+                var Data = eval("("+data+")");
+                if (Data["error"]) {
+                    Materialize.toast(Data["info"], 2000);
+                } else {
+                    Materialize.toast("Please check your email as soon as you can!", 2000);
+                    $("#modal-forget").closeModal();
+                }
+            }
+        });
+    });
 });
 
 function Signed() {

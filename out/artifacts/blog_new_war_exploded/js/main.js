@@ -27,6 +27,28 @@ $(document).ready(function () {
             }
         });
     });
+    $("#p_userName").blur(function () {
+        var url = "checkuserName";
+        var params = {
+            userName:$("#userName").val()
+        };
+        $.ajax({
+            url:url,
+            type:'POST',
+            data:params,
+            async: false,
+            success:function (data) {
+                var Data = eval("("+data+")");
+                if (Data["error"]) {
+                    document.getElementById("p_result").innerHTML = "<p style='color: red'>"+ Data["info"] + "</p>";
+                } else {
+                    document.getElementById("p_result").innerHTML = "<p style='color: green'>" + Data["info"] + "</p>";
+                }
+            },
+            error:function () {
+            }
+        });
+    });
     $("#btn").click(function () {
         var url = "register";
         var params = {
@@ -127,6 +149,28 @@ $(document).ready(function () {
             },
             error:function (XML) {
                 alert(XML.responseText);
+            }
+        });
+    });
+    $("#reset_password").click(function () {
+        var url="findPassword";
+        var params = {
+            userName:$("#p_userName").val(),
+            email:$("#p_email").val()
+        };
+        $.ajax({
+            url:url,
+            type:'POST',
+            data:params,
+            async:false,
+            success:function (data) {
+                var Data = eval("("+data+")");
+                if (Data["error"]) {
+                    Materialize.toast(Data["info"], 2000);
+                } else {
+                    Materialize.toast("Please check your email as soon as you can!", 2000);
+                    $("#modal-forget").closeModal();
+                }
             }
         });
     });
