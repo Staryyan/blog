@@ -32,17 +32,18 @@
         }
     </style>
 
-    <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="plugin/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="plugin/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <link rel="stylesheet" href="editor.md-master/css/editormd.preview.css" />
+    <link rel="stylesheet" href="plugin/editor.md-master/css/editormd.preview.css" />
+    <link rel="stylesheet" href="plugin/editor.md-master/css/editormd.css" />
     <style>
         .editormd-html-preview {
             width: 90%;
             margin: 0 auto;
         }
     </style>
-	<script type="text/javascript" src="materialize/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	<%
 		Cookie[] cookies = request.getCookies();
 		String userName = "";
@@ -141,20 +142,15 @@
         <form action="insertArticleComment.action" method="post">
             <div class="modal-content" style="width: 800px; margin-left: auto; margin-right: auto;">
                 <h4 style="text-align: center">Comment</h4>
-                <i class="material-icons prefix">mode_edit</i>
-                <label for="textarea1">Content</label>
-                <textarea name="content" id="textarea1" class="materialize-textarea"></textarea>
-                <input name="author" value="<%=userName%>">
-                <input name="id" value="<%=m_article.getId()%>">
+                <div id="test-editormd">
+                    <textarea style="display:none;"></textarea>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="submit" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</button>
             </div>
         </form>
     </div>
-
-
-
 
 </div>
 <footer class="page-footer">
@@ -173,17 +169,17 @@
     </div>
 </footer>
 
-<script src="editor.md-master/examples/js/jquery.min.js"></script>
-<script src="editor.md-master/lib/marked.min.js"></script>
-<script src="editor.md-master/lib/prettify.min.js"></script>
+<script src="plugin/editor.md-master/examples/js/jquery.min.js"></script>
+<script src="plugin/editor.md-master/lib/marked.min.js"></script>
+<script src="plugin/editor.md-master/lib/prettify.min.js"></script>
 
-<script src="editor.md-master/lib/raphael.min.js"></script>
-<script src="editor.md-master/lib/underscore.min.js"></script>
-<script src="editor.md-master/lib/sequence-diagram.min.js"></script>
-<script src="editor.md-master/lib/flowchart.min.js"></script>
-<script src="editor.md-master/lib/jquery.flowchart.min.js"></script>
+<script src="plugin/editor.md-master/lib/raphael.min.js"></script>
+<script src="plugin/editor.md-master/lib/underscore.min.js"></script>
+<script src="plugin/editor.md-master/lib/sequence-diagram.min.js"></script>
+<script src="plugin/editor.md-master/lib/flowchart.min.js"></script>
+<script src="plugin/editor.md-master/lib/jquery.flowchart.min.js"></script>
 
-<script src="editor.md-master/editormd.js"></script>
+<script src="plugin/editor.md-master/editormd.js"></script>
 <script type="text/javascript">
     $(function() {
         var testEditormdView, testEditormdView2;
@@ -225,10 +221,31 @@
         });
     });
 </script>
+<script type="text/javascript">
+    var testEditor;
+    $(function() {
+        testEditor = editormd("test-editormd", {
+            width           : "90%",
+            autoHeight      : true,
+            path            : "editor.md-master/lib/",
+            htmlDecode      : "style,script,iframe",
+            tex             : true,
+            emoji           : true,
+            taskList        : true,
+            flowChart       : true,
+            sequenceDiagram : true
+        });
 
+        $("#append-btn").click(function(){
+            $.get("./test.md", function(md){
+                testEditor.appendMarkdown(md);
+            });
+        });
+    });
+</script>
 <!--  Scripts-->
-<script src="materialize/jquery-3.1.0.min.js.js"></script>
-<script src="materialize/js/materialize.js"></script>
-<script src="materialize/js/materialize.min.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="plugin/materialize/js/materialize.js"></script>
+<script src="plugin/materialize/js/materialize.min.js"></script>
 </body>
 </html>

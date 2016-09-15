@@ -5,10 +5,6 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
     <package name="blog" extends="struts-default">
-        <action name="changePassword" class="actions.changePassword" method="execute">
-            <result name="success">/main_Signed.jsp</result>
-            <result name="error">/main_unSigned.jsp</result>
-        </action>
         <action name="writeArticle" class="actions.writeArticle" method="execute">
             <result name="success">/article.jsp</result>
         </action>
@@ -36,6 +32,11 @@
             </result>
         </action>
         <action name="signed" class="actions.Signed" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="changePassword" class="actions.changePassword" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>

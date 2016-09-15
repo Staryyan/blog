@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!-- CSS  -->
-    <%--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">--%>
-    <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="plugin/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="plugin/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <link rel="stylesheet" href="editor.md-master/css/editormd.css" />
-    <script type="text/javascript" src="materialize/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="plugin/editor.md-master/css/editormd.css" />
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <script>
         $(document).ready(function () {
             Signed();
@@ -167,9 +167,9 @@
         </div>
     </div>
     <!--Register Operation-->
-    <div id="modal-register" class="modal" style="width: 400px">
+    <div id="modal-register" class="modal">
         <div class="modal-content">
-            <h4 style="text-align: center">Register</h4>
+            <h4>Register</h4>
             <p>We will keep your information safe. Please trust us!</p>
             <input  id="userName"  placeholder="User Name" required type="text" class="validate">
             <p id="result"></p>
@@ -183,12 +183,28 @@
         </div>
     </div>
     <!--Profile Operation-->
-    <div id="modal-profile" class="modal" style="width: 400px">
+    <div id="modal-profile" class="modal">
         <div class="modal-content">
-            <h4 style="text-align: center">Profile Operation</h4>
-            <%--<input type="button" class="btn-flat" value="Change Password">--%>
-            <%--<input type="button" class="btn-flat" value="Feedback!">--%>
-            <%--<input type="button" class="btn-flat" value="Sign Out!">--%>
+            <h4>Profile Operation</h4>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Change Password</div>
+                    <div class="collapsible-body profile">
+                        <p>You can change password.</p>
+                        <input id="changePassword_userName" value="" placeholder="User Name" required type="text" class="validate" readonly>
+                        <input id="changePassword_oldpassword" placeholder="password" required type="password" class="validate">
+                        <input id="changePassword_newPassword" placeholder="new Password" required type="password" class="validate">
+                        <a id="changePassword-btn" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>SUBMIT</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Feedback</div>
+                    <div class="collapsible-body"><p>If you have any suggestion or advice about `Stary's blog`. You can send us a email.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">input</i>Sign out!</div>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -198,7 +214,6 @@
             <div class="row">
             <div class="input-field col s6">
                 <input name="m_article.author" id="author" value="" required type="text" class="validate">
-                <label for="author">author</label>
             </div>
         </div>
         <div class="row">
@@ -240,8 +255,8 @@
     </div>
 </footer>
 
-<script src="editor.md-master/examples/js/jquery.min.js"></script>
-<script src="editor.md-master/editormd.js"></script>
+<script src="plugin/editor.md-master/examples/js/jquery.min.js"></script>
+<script src="plugin/editor.md-master/editormd.js"></script>
 <script type="text/javascript">
     var testEditor;
     $(function() {
@@ -260,7 +275,7 @@
     });
 </script>
 <!--  Scripts-->
-<script src="materialize/js/materialize.js"></script>
-<script src="materialize/js/materialize.min.js"></script>
+<script src="plugin/materialize/js/materialize.js"></script>
+<script src="plugin/materialize/js/materialize.min.js"></script>
 </body>
 </html>

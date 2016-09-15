@@ -1,5 +1,6 @@
 /**
  * Created by yanzexin on 16/9/14.
+ * The Navigation.
  */
 $(document).ready(function () {
     Signed();
@@ -61,7 +62,7 @@ $(document).ready(function () {
         };
         $.ajax({
             url:url,
-            tyep:'POST',
+            type:'POST',
             data:params,
             async:false,
             success:function (data) {
@@ -82,6 +83,27 @@ $(document).ready(function () {
     $("#cancel").click(function () {
         document.getElementById("result").innerHTML = "";
     });
+    $("#writeArticle").click(function () {
+        var url = "signed";
+        var params = {
+            none:""
+        };
+        $.ajax({
+            url:url,
+            type:'POST',
+            data:params,
+            async:false,
+            success:function (data) {
+                var Data = eval("("+data+")");
+                var profile = $("#profile");
+                if (!Data["signed"]) {
+                    Materialize.toast("Please Sign in first.", 2000);
+                } else {
+                    window.location.href = "../writeArticle.jsp";
+                }
+            }
+        });
+    });
     $("#changePassword-btn").click(function () {
         var url="changePassword";
         var params = {
@@ -100,6 +122,7 @@ $(document).ready(function () {
                     Materialize.toast(Data["info"], 2000);
                 } else {
                     Materialize.toast("Change Password succeed!", 2000);
+                    $("#modal-profile").closeModal();
                 }
             },
             error:function (XML) {

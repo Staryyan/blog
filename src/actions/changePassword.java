@@ -3,6 +3,7 @@ package actions;
 import actions.dbUtil.DBUtil;
 import beans.User;
 import com.opensymphony.xwork2.ActionSupport;
+import net.sf.json.JSONObject;
 
 /**
  * Created by yanzexin on 16/9/11.
@@ -10,10 +11,23 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class changePassword extends ActionSupport {
     private String userName = "";
-    private String password = "";
+    private String oldPassword = "";
     private String newPassword = "";
+    private String result = "";
+
+    public changePassword() {
+    }
+
+    public changePassword(String userName, String oldPassword, String newPassword, String result) {
+
+        this.userName = userName;
+        this.oldPassword = oldPassword;
+        this.newPassword = newPassword;
+        this.result = result;
+    }
 
     public String getUserName() {
+
         return userName;
     }
 
@@ -21,12 +35,12 @@ public class changePassword extends ActionSupport {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getOldPassword() {
+        return oldPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
     }
 
     public String getNewPassword() {
@@ -36,12 +50,26 @@ public class changePassword extends ActionSupport {
     public void setNewPassword(String newPassword) {
         this.newPassword = newPassword;
     }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
     public String execute() {
         User t_user = DBUtil.queryUser(userName);
-        if (t_user != null && t_user.getPassword().equals(password)) {
-            DBUtil.updateUser(userName, password, "password", newPassword);
-            return "success";
+        JSONObject jsonObject = new JSONObject();
+        if (t_user.getPassword().equals(oldPassword)) {
+            DBUtil.updateUser(userName, oldPassword, "password", newPassword);
+            jsonObject.put("error", false);
+        } else  {
+            jsonObject.put("error", true);
+            jsonObject.put("info", "Wrong password");
         }
-        return "error";
+        result = jsonObject.toString();
+        return "success";
     }
 }
