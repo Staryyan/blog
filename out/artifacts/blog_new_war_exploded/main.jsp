@@ -42,7 +42,7 @@
             </ul>
             <a href="main.jsp" class="center brand-logo">Stary's Blog</a>
             <ul class="left hide-on-med-and-down">
-                <li><a href="listArticle.action">Article</a></li>
+                <li><a href="article.jsp">Article</a></li>
                 <li><a href="#">Discussion</a></li>
                 <li><a id="writeArticle">Write Article</a></li>
             </ul>
@@ -65,6 +65,7 @@
             <input id="logIn" type="submit" value="Log in" class=" btn-flat">
         </div>
     </div>
+        <%-- Find Password!--%>
     <div id="modal-forget" class="modal">
         <div class="modal-content">
             <h4>Find your password!</h4>
@@ -73,7 +74,6 @@
                 <input id="p_userName" required type="text" class="validate">
                 <label for="p_userName">User Name</label>
             </div>
-            <p id="p_result"></p>
             <div class="input-field col s6">
                 <input id="p_email" required type="email" class="validate">
                 <label for="p_email">Email</label>
@@ -120,7 +120,7 @@
                     <div class="collapsible-body"><p>If you have any suggestion or advice about `Stary's blog`. You can send us a email.</p></div>
                 </li>
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">input</i>Sign out!</div>
+                    <div class="collapsible-header"><i class="material-icons">input</i><a onclick="signOut()">Sign out!</a></div>
                 </li>
             </ul>
         </div>

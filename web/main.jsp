@@ -42,7 +42,7 @@
             </ul>
             <a href="main.jsp" class="center brand-logo">Stary's Blog</a>
             <ul class="left hide-on-med-and-down">
-                <li><a href="listArticle.action">Article</a></li>
+                <li><a href="article.jsp">Article</a></li>
                 <li><a href="#">Discussion</a></li>
                 <li><a id="writeArticle">Write Article</a></li>
             </ul>
@@ -120,7 +120,7 @@
                     <div class="collapsible-body"><p>If you have any suggestion or advice about `Stary's blog`. You can send us a email.</p></div>
                 </li>
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">input</i>Sign out!</div>
+                    <div class="collapsible-header"><i class="material-icons">input</i><a onclick="signOut()">Sign out!</a></div>
                 </li>
             </ul>
         </div>

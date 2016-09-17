@@ -8,9 +8,6 @@
         <action name="writeArticle" class="actions.writeArticle" method="execute">
             <result name="success">/article.jsp</result>
         </action>
-        <action name="listArticle" class="actions.listArticles" method="execute">
-            <result name="success">/article.jsp</result>
-        </action>
         <action name="insertArticleComment" class="actions.insertArticleComment" method="execute">
             <result name="success">/article.jsp</result>
         </action>
@@ -42,6 +39,16 @@
             </result>
         </action>
         <action name="findPassword" class="actions.findPassword" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="listArticle" class="actions.listArticles" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="signOut" class="actions.signOut" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>

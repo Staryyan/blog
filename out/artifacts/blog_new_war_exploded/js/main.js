@@ -27,28 +27,6 @@ $(document).ready(function () {
             }
         });
     });
-    $("#p_userName").blur(function () {
-        var url = "checkuserName";
-        var params = {
-            userName:$("#userName").val()
-        };
-        $.ajax({
-            url:url,
-            type:'POST',
-            data:params,
-            async: false,
-            success:function (data) {
-                var Data = eval("("+data+")");
-                if (Data["error"]) {
-                    document.getElementById("p_result").innerHTML = "<p style='color: red'>"+ Data["info"] + "</p>";
-                } else {
-                    document.getElementById("p_result").innerHTML = "<p style='color: green'>" + Data["info"] + "</p>";
-                }
-            },
-            error:function () {
-            }
-        });
-    });
     $("#btn").click(function () {
         var url = "register";
         var params = {
@@ -191,13 +169,39 @@ function Signed() {
             var profile = $("#profile");
             if (!Data["signed"]) {
                 profile.empty();
-                profile.append("<li><a class='modal-trigger' href='#modal-login'>Log in</a></li>");
-                profile.append("<li><a class='modal-trigger' href='#modal-register'>Register</a></li>");
+                profile.append("<li><a onclick='logIn()'>Log in</a></li>");
+                profile.append("<li><a onclick='register()'>Register</a></li>");
             } else {
                 profile.empty();
                 profile.append("<li><a onclick='Profile()' style='margin-left:20px; margin-right:20px;'>"+ Data["userName"] +"</a></li>");
                 document.getElementById("changePassword_userName").value = Data["userName"];
             }
+        }
+    });
+}
+function register() {
+    $("#modal-register").openModal();
+}
+function logIn() {
+    $("#modal-login").openModal();
+}
+
+function signOut() {
+    var url = "signOut";
+    var params = {
+        none:""
+    };
+    $.ajax({
+       url:url,
+        type:'POST',
+        data:params,
+        async:false,
+        success:function () {
+            $("#modal-profile").closeModal();
+            Signed();
+        },
+        error:function (XML) {
+            alert(XML.responseText);
         }
     });
 }

@@ -82,7 +82,7 @@
 					<li><a href="#modal-changePassword" class="modal-trigger">Change Password</a></li>
 					<li><a>Feedback.</a></li>
 					<li class="divider"></li>
-					<li><a href="main_unSigned.jsp">Sign out</a></li>
+					<li><a href="main.jsp">Sign out</a></li>
 				</ul>
 			</ul>
 			<a href="#!" class="center brand-logo">Stary's Blog</a>
