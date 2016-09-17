@@ -55,8 +55,8 @@
             <input id="l_userName" placeholder="User Name" required type="text" class="validate">
             <input id="l_password" placeholder="password" required type="password" class="validate">
             <p>
-                <input type="checkbox" id="Remember-me" />
-                <label for="Remember-me">Remember me!</label>
+                <input type="text" id="Remember_me" />
+                <label for="Remember_me">Remember me!</label>
             </p>
             <a  class="modal-trigger" href="#modal-forget">Forget your password?</a>
         </div>

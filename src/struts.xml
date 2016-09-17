@@ -53,5 +53,10 @@
                 <param name="root">result</param>
             </result>
         </action>
+        <action name="listArticleComments" class="actions.listArticleComments" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 </struts>
