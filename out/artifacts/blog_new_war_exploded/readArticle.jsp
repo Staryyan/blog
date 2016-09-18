@@ -72,18 +72,21 @@
             });
 	    });
         $("#comment-submit").click(function () {
-            var url = "insertComment";
+            var url = "insertArticleComment";
             var params = {
                 author:$("#name").val(),
                 content:$("#comment-content").val(),
                 id:<%=id%>
             };
             $.ajax({
-               url:url,
+                url:url,
                 data:params,
+                type:'POST',
                 async:false,
                 success:function (Data) {
+                    Materialize.toast("Comment succeed!", 2000);
                     reloadComments();
+                    $("#modal-comment").closeModal();
                 },
                 error:function (XML) {
                     alert(XML.responseText);
@@ -141,8 +144,8 @@
             <input id="l_userName" placeholder="User Name" required type="text" class="validate">
             <input id="l_password" placeholder="password" required type="password" class="validate">
             <p>
-                <input type="text" id="Remember_me" />
-                <label for="Remember_me">Remember me!</label>
+                <input type="checkbox" id="Remember-me" />
+                <label for="Remember-me">Remember me!</label>
             </p>
             <a  class="modal-trigger" href="#modal-forget">Forget your password?</a>
         </div>
@@ -235,17 +238,16 @@
 
     <!-- Modal Structure -->
     <div id="modal-comment" class="modal bottom-sheet">
-        <form action="insertArticleComment.action" method="post">
             <div class="modal-content" style="width: 800px; margin-left: auto; margin-right: auto;">
-                <h4 style="text-align: center">Comment</h4>
-                <textarea id="comment-content"></textarea>
+                    <div class="input-field col s12">
+                        <textarea id="comment-content" class="materialize-textarea"></textarea>
+                        <label for="comment-content">Comment</label>
+                    </div>
+                <div class="modal-footer">
+                    <button type="submit" class="waves-effect waves-green btn-flat" id="comment-submit">Submit</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="waves-effect waves-green btn-flat" id="comment-submit">Submit</button>
-            </div>
-        </form>
     </div>
-
 </div>
 <footer class="page-footer">
     <div class="container">

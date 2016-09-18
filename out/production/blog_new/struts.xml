@@ -8,9 +8,6 @@
         <action name="writeArticle" class="actions.writeArticle" method="execute">
             <result name="success">/article.jsp</result>
         </action>
-        <action name="insertArticleComment" class="actions.insertArticleComment" method="execute">
-            <result name="success">/article.jsp</result>
-        </action>
     </package>
     <package name="ajax" namespace="/" extends="json-default">
         <action name="checkuserName" class="actions.checkuserName" method="execute">
@@ -54,6 +51,11 @@
             </result>
         </action>
         <action name="listArticleComments" class="actions.listArticleComments" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="insertArticleComment" class="actions.insertArticleComment" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
