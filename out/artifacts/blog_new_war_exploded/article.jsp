@@ -41,10 +41,12 @@
     <div style="position: fixed; bottom: 90px; right: 30px;">
         <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
     </div>
-
     <ul id="list" class="collapsible popout" data-collapsible="accordion" style="margin-top: 40px;">
     </ul>
-
+    <ul class="pagination">
+        <li class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
+        <li id="last-page" class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+    </ul>
 </div>
 <jsp:include page="Footer.jsp"/>
 <!--  Scripts-->

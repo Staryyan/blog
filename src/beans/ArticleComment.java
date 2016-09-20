@@ -11,7 +11,6 @@ public class ArticleComment {
     private String author;
     private Date date;
     private String content;
-
     public ArticleComment() {
     }
 

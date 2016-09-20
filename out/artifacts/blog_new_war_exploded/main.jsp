@@ -8,6 +8,26 @@
     <link href="css/main.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        (function($){
+            $(function(){
+
+                $('.button-collapse').sideNav();
+
+            }); // end of document ready
+        })(jQuery); // end of jQuery name space
+    </script>
+    <style>
+        header, main, footer {
+            padding-left: 300px;
+        }
+
+        @media only screen and (max-width : 992px) {
+            header, main, footer {
+                padding-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -51,6 +71,21 @@
             </div>
         </div>
     </div>
+
+    <ul id="slide-out" class="side-nav">
+        <%--<li><div class="userView">--%>
+            <%--<img class="background" src="images/office.jpg">--%>
+            <%--<a href="#!user"><img class="circle" src="images/yuna.jpg"></a>--%>
+            <%--<a href="#!name"><span class="white-text name">John Doe</span></a>--%>
+            <%--<a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>--%>
+        <%--</div></li>--%>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" class="button-collapse" data-activates="slide-out"><i class="material-icons">menu</i>Click me!</a>
 </div>
 <jsp:include page="Footer.jsp" />
 <!--  Scripts-->
