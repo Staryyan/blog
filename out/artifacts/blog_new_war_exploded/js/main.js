@@ -99,7 +99,7 @@ $(document).ready(function () {
                 if (!Data["signed"]) {
                     Materialize.toast("Please Sign in first.", 2000);
                 } else {
-                    window.location.href = "../writeArticle.jsp";
+                    window.location.href = "../web-content/writeArticle.jsp";
                 }
             }
         });

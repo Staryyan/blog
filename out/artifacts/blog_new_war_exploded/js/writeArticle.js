@@ -92,7 +92,7 @@ function signOut() {
         async:false,
         success:function () {
             $("#modal-profile").closeModal();
-            window.location.href = "main.jsp";
+            window.location.href = "../web-content/main.jsp";
         },
         error:function (XML) {
             alert(XML.responseText);

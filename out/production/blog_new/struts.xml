@@ -5,57 +5,57 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
     <package name="blog" extends="struts-default">
-        <action name="writeArticle" class="actions.writeArticle" method="execute">
-            <result name="success">/article.jsp</result>
+        <action name="writeArticle" class="actions.WriteArticleAction" method="execute">
+            <result name="success">/web-content/article.jsp</result>
         </action>
     </package>
     <package name="ajax" namespace="/" extends="json-default">
-        <action name="checkuserName" class="actions.checkuserName" method="execute">
+        <action name="checkuserName" class="actions.CheckUserNameAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="register" class="actions.registerAction" method="execute">
+        <action name="register" class="actions.RegisterAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="login" class="actions.loginAction" method="execute">
+        <action name="login" class="actions.LoginAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="signed" class="actions.Signed" method="execute">
+        <action name="signed" class="actions.SignedAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="changePassword" class="actions.changePassword" method="execute">
+        <action name="changePassword" class="actions.ChangePasswordAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="findPassword" class="actions.findPassword" method="execute">
+        <action name="findPassword" class="actions.FindPasswordAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="listArticle" class="actions.listArticles" method="execute">
+        <action name="listArticle" class="actions.ListArticlesAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="signOut" class="actions.signOut" method="execute">
+        <action name="signOut" class="actions.SignOutAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="listArticleComments" class="actions.listArticleComments" method="execute">
+        <action name="listArticleComments" class="actions.ListArticleCommentsAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
         </action>
-        <action name="insertArticleComment" class="actions.insertArticleComment" method="execute">
+        <action name="insertArticleComment" class="actions.InsertArticleCommentAction" method="execute">
             <result name="success" type="json">
                 <param name="root">result</param>
             </result>
