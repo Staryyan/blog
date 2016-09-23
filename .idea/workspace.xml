@@ -6,122 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="623a4840-03db-48d3-b60c-12a3619bfdaf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/glyphicons/flat-ui-icons-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/glyphicons/flat-ui-icons-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/glyphicons/flat-ui-icons-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-black.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-black.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-black.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bolditalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bolditalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bolditalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-italic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-italic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/vendor/video-js.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_new_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/flat-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/flat-ui.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/flat-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/css/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/glyphicons/flat-ui-icons-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/glyphicons/selection.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-black.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-bolditalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-italic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/fonts/lato/lato-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/flat-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/flat-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/vendor/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/vendor/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/vendor/jquery.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/vendor/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plugin/Flat-UI/js/vendor/video.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/Footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/Navigation.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/Signed.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/Util/Mail.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/changePassword.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/checkuserName.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/dbUtil/DBInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/dbUtil/DBUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/findPassword.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/insertArticleComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/listArticleComments.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/listArticles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/signOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/writeArticle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/article.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/readArticle.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/writeArticle.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/Signed.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/Util/Mail.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/changePassword.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/checkuserName.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/dbUtil/DBInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/dbUtil/DBUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/findPassword.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/insertArticleComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/listArticleComments.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/listArticles.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/signOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/writeArticle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/Util/Mail.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/blogService.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/Signed.java" afterPath="$PROJECT_DIR$/src/actions/SignedAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/changePassword.java" afterPath="$PROJECT_DIR$/src/actions/ChangePasswordAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/checkuserName.java" afterPath="$PROJECT_DIR$/src/actions/CheckUserNameAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/dbUtil/DBInfo.java" afterPath="$PROJECT_DIR$/src/utils/dbUtil/DBInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/dbUtil/DBUtil.java" afterPath="$PROJECT_DIR$/src/utils/dbUtil/DBUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/findPassword.java" afterPath="$PROJECT_DIR$/src/actions/FindPasswordAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/insertArticleComment.java" afterPath="$PROJECT_DIR$/src/actions/InsertArticleCommentAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/listArticleComments.java" afterPath="$PROJECT_DIR$/src/actions/ListArticleCommentsAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/listArticles.java" afterPath="$PROJECT_DIR$/src/actions/ListArticlesAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/loginAction.java" afterPath="$PROJECT_DIR$/src/actions/LoginAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/registerAction.java" afterPath="$PROJECT_DIR$/src/actions/RegisterAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/signOut.java" afterPath="$PROJECT_DIR$/src/actions/SignOutAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/actions/writeArticle.java" afterPath="$PROJECT_DIR$/src/actions/WriteArticleAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Footer.jsp" afterPath="$PROJECT_DIR$/web/web-content/Footer.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/Navigation.jsp" afterPath="$PROJECT_DIR$/web/web-content/Navigation.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/article.jsp" afterPath="$PROJECT_DIR$/web/web-content/article.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/main.jsp" afterPath="$PROJECT_DIR$/web/web-content/main.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/readArticle.jsp" afterPath="$PROJECT_DIR$/web/web-content/readArticle.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/writeArticle.jsp" afterPath="$PROJECT_DIR$/web/web-content/writeArticle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/loginAction.class" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/loginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/registerAction.class" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/registerAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/loginAction.class" afterPath="$PROJECT_DIR$/out/production/blog_new/actions/loginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/registerAction.class" afterPath="$PROJECT_DIR$/out/production/blog_new/actions/registerAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/Article.js" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/Article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/main.js" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/writeArticle.js" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/writeArticle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/struts.xml" afterPath="$PROJECT_DIR$/out/production/blog_new/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/Article.js" afterPath="$PROJECT_DIR$/web/js/Article.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/main.js" afterPath="$PROJECT_DIR$/web/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/writeArticle.js" afterPath="$PROJECT_DIR$/web/js/writeArticle.js" />
-    </list>
+    <list default="true" id="623a4840-03db-48d3-b60c-12a3619bfdaf" name="Default" comment="" />
     <ignored path="blog_new.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -166,43 +51,7 @@
     <favorites_list name="blog_new" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/struts.xml">
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckUserNameAction.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/actions/CheckUserNameAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-              <folding>
-                <element signature="e#537#538#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web-content/article.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -399,43 +248,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
+              <option name="myItemId" value="web-content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1155,7 +972,7 @@
       <workItem from="1474515488533" duration="5000" />
       <workItem from="1474515713835" duration="339000" />
       <workItem from="1474520998162" duration="70000" />
-      <workItem from="1474600592384" duration="734000" />
+      <workItem from="1474600592384" duration="875000" />
     </task>
     <servers />
   </component>
@@ -1192,11 +1009,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70254000" />
+    <option name="totallyTimeSpent" value="70395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1209,17 +1026,17 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31445783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31445783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459228" sideWeight="0.49196786" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459228" sideWeight="0.49196786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21459228" sideWeight="0.50803214" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15665236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4120482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4120482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1474,13 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/Footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/web-content/readArticle.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1564,14 +1374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/Navigation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/web-content/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
@@ -1626,17 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1697,21 +1488,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/Footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/web-content/article.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/Navigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/CheckUserNameAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        <state relative-caret-position="690">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
+            <element signature="e#497#498#0" expanded="true" />
             <element signature="e#537#538#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
