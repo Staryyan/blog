@@ -1,104 +1,6 @@
 $(document).ready(function () {
-    Signed();
-    $('.modal-trigger').leanModal();
-    $("#userName").blur(function () {
-        var url = "checkuserName";
-        var params = {
-            userName:$("#userName").val()
-        };
-        $.ajax({
-            url:url,
-            type:'POST',
-            data:params,
-            async: false,
-            success:function (data) {
-                var Data = eval("("+data+")");
-                if (Data["error"]) {
-                    document.getElementById("result").innerHTML = "<p style='color: red'>"+ Data["info"] + "</p>";
-                } else {
-                    document.getElementById("result").innerHTML = "<p style='color: green'>" + Data["info"] + "</p>";
-                }
-            },
-            error:function () {
-            }
-        });
-    });
-    $("#btn").click(function () {
-        var url = "register";
-        var params = {
-            userName:$("#userName").val(),
-            password:$("#password").val(),
-            email:$("#email").val(),
-            phone:$("#phone").val()
-        };
-        $.ajax({
-            url:url,
-            type:'POST',
-            data:params,
-            async: false,
-            success:function (data) {
-                var Data = eval("("+data+")");
-                if (Data["error"]) {
-                    Materialize.toast("Register failed!", 2000);
-                } else {
-                    Materialize.toast('Register succeed!', 2000);
-                    $('#modal-register').closeModal();
-                }
-            },
-            error:function (XML) {
-                alert(XML.responseText);
-            }
-        });
-    });
-    $("#logIn").click(function () {
-        var url = "login";
-        var params = {
-            userName:$("#l_userName").val(),
-            password:$("#l_password").val()
-        };
-        $.ajax({
-            url:url,
-            tyep:'POST',
-            data:params,
-            async:false,
-            success:function (data) {
-                var Data = eval("("+data+")");
-                if (Data["error"]) {
-                    Materialize.toast(Data["info"], 2000);
-                } else {
-                    Materialize.toast('Log in succeed!', 2000);
-                    $('#modal-login').closeModal();
-                    Signed();
-                }
-            },
-            error:function (XML) {
-                alert(XML.responseText);
-            }
-        });
-    });
-    $("#cancel").click(function () {
-        document.getElementById("result").innerHTML = "";
-    });
+   Signed();
 });
-function signOut() {
-    var url = "signOut";
-    var params = {
-        none:""
-    };
-    $.ajax({
-        url:url,
-        type:'POST',
-        data:params,
-        async:false,
-        success:function () {
-            $("#modal-profile").closeModal();
-            window.location.href = "../web-content/main.jsp";
-        },
-        error:function (XML) {
-            alert(XML.responseText);
-        }
-    });
-}
 function Signed() {
     var url = "signed";
     var params = {
@@ -123,7 +25,4 @@ function Signed() {
             }
         }
     });
-}
-function Profile() {
-    $("#modal-profile").openModal();
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../plugin/editor.md-master/css/editormd.css" />
     <%
         int id = Integer.parseInt(request.getParameter("id"));
-        Article m_article = DBUtil.queryArticle(id);
+        Article m_article = DBUtil.queryArticle(id, "Articles");
     %>
     <style>
         .editormd-html-preview {

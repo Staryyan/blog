@@ -182,10 +182,10 @@ public class DBUtil {
         }
         return null;
     }
-    public static Article queryArticle(int id) {
+    public static Article queryArticle(int id, String table) {
         try {
             openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Articles WHERE id = ?");
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM " + table +" WHERE id = ?");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -203,7 +203,7 @@ public class DBUtil {
      * @param id the unique index of Articles.
      * @param table UncheckedArticles/Articles
      */
-    public void deleteArticle(int id, String table) {
+    public static void deleteArticle(int id, String table) {
         try {
             openDB();
             PreparedStatement ps = blogConnection.prepareStatement("DELETE FROM "+ table +" WHERE id=?");

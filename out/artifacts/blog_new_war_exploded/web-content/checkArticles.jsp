@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../plugin/editor.md-master/css/editormd.css" />
     <%
         int id = Integer.parseInt(request.getParameter("id"));
-        Article m_article = DBUtil.queryArticle(id, "Articles");
+        Article m_article = DBUtil.queryArticle(id, "UncheckedArticles");
     %>
     <style>
         .editormd-html-preview {
@@ -18,117 +18,105 @@
             margin: 0 auto;
         }
     </style>
-	<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script>
-        $(document).ready(function () {
-            reloadComments();
-            $("#comment").click(function () {
-                var url = "signed";
-                var params = {
-                    none:""
-                };
-                $.ajax({
-                    url:url,
-                    type:'POST',
-                    data:params,
-                    async:false,
-                    success:function (data) {
-                        var Data = eval("("+data+")");
-                        var profile = $("#profile");
-                        if (!Data["signed"]) {
-                            Materialize.toast("Please Sign in first.", 2000);
-                        } else {
-                            $("#modal-comment").openModal();
-                        }
-                    }
-                });
-            });
-            $("#comment-submit").click(function () {
-                var url = "InsertArticleCommentAction";
-                var params = {
-                    author:$("#name").val(),
-                    content:$("#comment-content").val(),
-                    id:<%=id%>
-                };
-                $.ajax({
-                    url:url,
-                    data:params,
-                    type:'POST',
-                    async:false,
-                    success:function (Data) {
-                        Materialize.toast("Comment succeed!", 2000);
-                        reloadComments();
-                        $("#modal-comment").closeModal();
-                    },
-                    error:function (XML) {
-                        alert(XML.responseText);
-                    }
-                });
-
-            });
-        });
-        function reloadComments() {
-            var url = "ListArticleCommentsAction";
-            var params = {
-                id:<%=m_article.getId()%>
+        function Delete(id) {
+            var url="deleteUncheckedArticle";
+            var params={
+                id:id
             };
             $.ajax({
                 url:url,
                 type:'POST',
                 data:params,
                 async:false,
-                success:function (data) {
-                    var Data = eval("("+data+")");
-                    var Comments = Data["comments"];
-                    var comment_id = $("#comments");
-                    for (var comment in Comments) {
-                        comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Author:</small>" + Comments[comment]["author"]  + "</h5>");
-                        comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Date:</small>" + Comments[comment]["date"] + "</h5>");
-                        comment_id.append("<p>" + Comments[comment]["content"] + "</p>");
-                        comment_id.append("<hr />");
-                    }
+                success:function (Data) {
+                    Materialize.toast("Delete Article succeed!", 2000);
+                    window.location.href="listCheckArticles.jsp";
+                },
+                error:function (XML) {
+                    alert(XML.responseText);
                 }
-
-            });
+            })
+        }
+        function Reply() {
+            $("#modal-Articles-reply").openModal();
+        }
+        function reply_apply() {
+            var url="applyUncheckedArticles";
+            var params={
+                id:<%=m_article.getId()%>,
+                content:$("#reply-content").val()
+            };
+            $.ajax({
+                url:url,
+                type:'POST',
+                data:params,
+                async:false,
+                success:function (Data) {
+                    window.location.href = "listCheckedArticles.jsp";
+                },
+                error:function (XML) {
+                    alert(XML.responseText);
+                }
+            })
+        }
+        function reply_deny() {
+            var url="denyUncheckedArticles";
+            var params={
+                id:<%=m_article.getId()%>,
+                content:$("#reply-content").val()
+            };
+            $.ajax({
+                url:url,
+                type:'POST',
+                data:params,
+                async:false,
+                success:function (Data) {
+                    Window.location.href = "listCheckedArticles.jsp";
+                },
+                error:function (XML) {
+                    alert(XML.responseText);
+                }
+            })
         }
     </script>
-    <script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
 <div class="container">
     <jsp:include page="Navigation.jsp"/>
 
-    <div style="position: fixed; bottom: 90px; right: 30px;">
-        <!-- Modal Trigger -->
-        <a class="btn-floating btn-large red" id="comment"><i class="large material-icons">mode_edit</i></a>
-    </div>
-
     <h2 class="header"><%=m_article.getTitle()%></h2>
     <h5><i class="material-icons left">perm_identity</i><small>Author:</small><%=m_article.getAuthor()%></h5>
-	<h5><i class="material-icons left">perm_identity</i><small>Date:</small><%=m_article.getDate()%></h5>
+    <h5><i class="material-icons left">perm_identity</i><small>Date:</small><%=m_article.getDate()%></h5>
     <h5><i class="material-icons left">info_outline</i><small>Description:</small><%=m_article.getDescription()%></h5>
     <hr>
     <div id="test-editormd-view2">
         <textarea style="display:none;"><%=m_article.getContent()%></textarea>
     </div>
-
     <hr />
-    <h2 class="header">Comments</h2>
-        <div id="comments">
+    <button class="btn green" onclick="Reply()"><i class="material-icons">verified_user</i>Reply</button>
+    <a class="btn red" onclick="Delete(<%=m_article.getId()%>)"><i class="material-icons">delete</i>Delete</a>
 
-        </div>
 
     <!-- Modal Structure -->
-    <div id="modal-comment" class="modal bottom-sheet">
-            <div class="modal-content" style="width: 800px; margin-left: auto; margin-right: auto;">
-                    <div class="input-field col s12">
-                        <textarea id="comment-content" class="materialize-textarea"></textarea>
-                        <label for="comment-content">Comment</label>
-                    </div>
-                <div class="modal-footer">
-                    <button type="submit" class="waves-effect waves-green btn-flat" id="comment-submit">Submit</button>
+    <div id="modal-Articles-reply" class="modal">
+        <div class="modal-content">
+            <h4>Reply</h4>
+            <p>We will send an email to the author.</p>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="reply-content" class="materialize-textarea"></textarea>
+                    <label for="reply-content">Reply</label>
                 </div>
             </div>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-action modal-close btn-flat" id="feedback-apply" onclick="reply_apply()">Apply!</a>
+            <a class="modal-action modal-close btn-flat" id="feedback-deny" onclick="reply_deny()">deny!</a>
+        </div>
     </div>
 </div>
 <jsp:include page="Footer.jsp"/>

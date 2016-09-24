@@ -80,5 +80,30 @@
                 <param name="root">result</param>
             </result>
         </action>
+        <action name="reply" class="actions.ReplyAction" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="listUncheckedArticles" class="actions.ListUncheckedArticlesAction" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="deleteUncheckedArticle" class="actions.deleteUncheckedArticlesAction" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="applyUncheckedArticles" class="actions.ApplyArticlesAction" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="denyUncheckedArticles" class="actions.DenyArticlesAction" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 </struts>

@@ -27,7 +27,7 @@ public class Mail {
         message.setFrom(new InternetAddress(myEmailAccount, "Stary's Blog", "UTF-8"));
 
         // 3. To: 收件人（可以增加多个收件人、抄送、密送）
-        message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail, "XX用户", "UTF-8"));
+        message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail, "", "UTF-8"));
 
         // 4. Subject: 邮件主题
         message.setSubject("Thanks for using stary's Blog.", "UTF-8");
@@ -74,7 +74,7 @@ public class Mail {
 
     public static void main(String[] args) {
         try {
-            Mail.send("yzx9610@outlook.com", "Thanks for using Stary's blog!");
+            Mail.send("718202260@qq.com", "I Am stary. How are you?");
         } catch (Exception error) {
             error.printStackTrace();
         }

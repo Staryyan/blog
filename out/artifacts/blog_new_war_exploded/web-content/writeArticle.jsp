@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="../plugin/editor.md-master/css/editormd.css" />
     <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/writeArticle.js"></script>
 </head>
 <body>
@@ -19,11 +20,7 @@
     <jsp:include page="Navigation.jsp"/>
     <div class="row" style="margin-top: 40px;">
         <form class="col s12" action="writeArticle.action" method="post">
-            <div class="row">
-            <div class="input-field col s6">
-                <input name="m_article.author" id="author" value="" required type="text" class="validate">
-            </div>
-        </div>
+                <input name="m_article.author" id="author" value="" required type="text" class="validate" style="display: none">
         <div class="row">
             <div class="input-field col s6">
                 <input name="m_article.title" id="title" required type="text" class="validate">

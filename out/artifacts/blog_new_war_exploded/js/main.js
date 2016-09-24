@@ -210,7 +210,7 @@ function Signed() {
             } else {
                 profile.empty();
                 if ( Data["userName"] == "root") {
-                    profile.append("<li><a>Check Articles</a></li>");
+                    profile.append("<li><a href='../web-content/listCheckArticles.jsp'>Check Articles</a></li>");
                     profile.append("<li><a href='../web-content/feedbackList.jsp'>Check Feedback</a></li>");
                     profile.append("<li><a href='../web-content/userList.jsp'>User List</a>");
                     profile.append("<li><a id='name' onclick='Profile()'>"+ Data["userName"] +"</a></li>");
@@ -241,9 +241,8 @@ function signOut() {
         data:params,
         async:false,
         success:function () {
-            $("#modal-profile").closeModal();
-            Signed();
-        },
+            window.location.href = "../web-content/main.jsp";
+       },
         error:function (XML) {
             alert(XML.responseText);
         }
