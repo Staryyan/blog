@@ -18,7 +18,7 @@
         <input id="l_userName" placeholder="User Name" required type="text" class="validate">
         <input id="l_password" placeholder="password" required type="password" class="validate">
         <p>
-            <input type="text" id="Remember_me" />
+            <input type="checkbox" id="Remember_me" />
             <label for="Remember_me">Remember me!</label>
         </p>
         <a  class="modal-trigger" href="#modal-forget">Forget your password?</a>
@@ -79,12 +79,31 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="material-icons">place</i>Feedback</div>
-                <div class="collapsible-body"><p>If you have any suggestion or advice about `Stary's blog`. You can send us a email.</p></div>
-            </li>
-            <li>
                 <div class="collapsible-header"><i class="material-icons">input</i><a onclick="signOut()">Sign out!</a></div>
             </li>
         </ul>
+    </div>
+</div>
+
+<!-- Modal Trigger -->
+<a class="btn-flat" style="position: fixed; bottom: 30px;
+    right: 20px; background-color: white;color: darkseagreen; font-size: larger;
+    vertical-align: sub" onclick="feedback()"><i class="Small material-icons">turned_in</i>Feedback!</a>
+
+<!-- Modal Structure -->
+<div id="modal-feedback" class="modal">
+    <div class="modal-content">
+        <h4>Feedback</h4>
+        <p>If you have any suggestion about this blog, you can write down it and we will check it soon.</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea id="feedback-content" class="materialize-textarea"></textarea>
+                <label for="feedback-content">Feedback</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class=" modal-action modal-close btn-flat" id="feedback-send">Send!</a>
     </div>
 </div>

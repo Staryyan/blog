@@ -7,6 +7,7 @@ package utils.dbUtil;
 
 import beans.Article;
 import beans.ArticleComment;
+import beans.Feedback;
 import beans.User;
 
 import java.sql.*;
@@ -405,8 +406,21 @@ public class DBUtil {
 //            error.printStackTrace();
 //        }
 //    }
-
-//    public static void main(String[] args) {
-//        System.out.print(readArticle());
-//    }
+        public static void insertFeedback(Feedback feedback) {
+            try {
+                openDB();
+                PreparedStatement sql = blogConnection.prepareStatement("INSERT INTO Feedbacks(author, date, content) VALUES (?, ?, ?)");
+                sql.setString(1, feedback.getAuthor());
+                sql.setDate(2, feedback.getDate());
+                sql.setString(3, feedback.getContent());
+                sql.execute();
+                closeDB();
+            } catch (Exception error) {
+                error.printStackTrace();
+            }
+        }
+    public static void main(String[] args) {
+        Feedback feedback = new Feedback("root", new Date(System.currentTimeMillis()), "test");
+        DBUtil.insertFeedback(feedback);
+    }
 }

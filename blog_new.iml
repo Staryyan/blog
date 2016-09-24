@@ -31,11 +31,24 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M9" level="application_server_libraries" />
     <orderEntry type="library" name="Struts 2-2.3.20.1" level="project" />
-    <orderEntry type="library" name="junit-4.12" level="project" />
     <orderEntry type="library" name="servlet" level="project" />
     <orderEntry type="library" name="ezmorph" level="project" />
     <orderEntry type="library" name="struts2-json-plugin-2.2.3" level="project" />
     <orderEntry type="library" name="json-lib-2.4-jdk15" level="project" />
     <orderEntry type="library" name="javax.mail" level="project" />
+    <orderEntry type="library" name="mysql" level="project" />
+    <orderEntry type="library" scope="TEST" name="junit-4.12" level="project" />
+    <orderEntry type="module-library">
+      <library name="testng">
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/jcommander.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="src" level="project" />
+    <orderEntry type="library" name="junit-4.12" level="project" />
   </component>
 </module>

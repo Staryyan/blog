@@ -42,11 +42,13 @@ public class SignedAction {
         Cookie[] cookies = ServletActionContext.getRequest().getCookies();
         JSONObject jsonObject = new JSONObject();
         for (Cookie each : cookies) {
-            if (each.getName().equals("userName") && each.getValue() != null && !each.getValue().equals("")) {
-                jsonObject.put("signed", true);
-                jsonObject.put("userName", each.getValue());
-            } else {
-                jsonObject.put("signed", false);
+            if (each.getName().equals("userName") && each.getValue() != null) {
+                if (each.getValue().equals("")) {
+                    jsonObject.put("signed", false);
+                } else {
+                    jsonObject.put("signed", true);
+                    jsonObject.put("userName", each.getValue());
+                }
             }
         }
         result = jsonObject.toString();

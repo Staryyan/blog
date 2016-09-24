@@ -38,7 +38,7 @@ public class SignOutAction {
         this.result = result;
     }
     public String execute() {
-        ServletActionContext.getResponse().addCookie(new Cookie("userName", ""));
+        ServletActionContext.getResponse().addCookie(new Cookie("userName", null));
         result = "";
         return "success";
     }

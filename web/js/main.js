@@ -5,6 +5,43 @@
 $(document).ready(function () {
     Signed();
     $('.modal-trigger').leanModal();
+    $("#feedback-send").click(function () {
+        var url = "signed";
+        var params = {
+            none: ""
+        };
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: params,
+            async: false,
+            success: function (data) {
+                var Data = eval("(" + data + ")");
+                var profile = $("#profile");
+                if (!Data["signed"]) {
+                    Materialize.toast("Please Sign in first.", 2000);
+                } else {
+                    url="insertFeedback";
+                    var params={
+                        author:Data["userName"],
+                        content:$("#feedback-content").val()
+                    };
+                    $.ajax({
+                        url:url,
+                        type:'POST',
+                        data:params,
+                        async:false,
+                        success:function (data) {
+                            Materialize.toast("Feedback succeed!", 2000);
+                        },
+                        error:function (XML) {
+                            alert(XML.responseText);
+                        }
+                    })
+                }
+            }
+        });
+    });
     $("#userName").blur(function () {
         var url = "checkuserName";
         var params = {
@@ -206,4 +243,25 @@ function signOut() {
 }
 function Profile() {
     $("#modal-profile").openModal();
+}
+function feedback() {
+        var url = "signed";
+        var params = {
+            none: ""
+        };
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: params,
+            async: false,
+            success: function (data) {
+                var Data = eval("(" + data + ")");
+                var profile = $("#profile");
+                if (!Data["signed"]) {
+                    Materialize.toast("Please Sign in first.", 2000);
+                } else {
+                    $("#modal-feedback").openModal();
+                }
+            }
+        });
 }
