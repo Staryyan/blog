@@ -47,7 +47,7 @@ public class DBUtil {
     * Query user with its userName;
     * @param userName the name which will be queryed.
     * @return User(could be null).
-            */
+     */
     public static User queryUser(final String userName) {
         try {
             openDB();
@@ -121,13 +121,35 @@ public class DBUtil {
     }
 
     /**
-     * insert article into Articles.
-     * @param article
+     * List Users
+     * @return User List
      */
-    public static void insertArticle(Article article) {
+    public static ArrayList<User> listUsers() {
         try {
             openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO Articles(author, date, title, description, content) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Users WHERE userName <> ?");
+            ps.setString(1, "root");
+            ResultSet rs = ps.executeQuery();
+            ArrayList<User> ans = new ArrayList<>();
+            while (rs.next()) {
+                ans.add(new User(rs.getString("userName"), rs.getString("email"), rs.getString("phone")));
+            }
+            return ans;
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * Insert Article into Database.
+     * @param article which will be inserted.
+     * @param table UncheckedArticles/Articles.
+     */
+    public static void insertArticle(Article article, String table) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("INSERT INTO "+ table +"(author, date, title, description, content) VALUES (?, ?, ?, ?, ?)");
             ps.setString(1, article.getAuthor());
             ps.setDate(2, article.getDate());
             ps.setString(3, article.getTitle());
@@ -141,13 +163,14 @@ public class DBUtil {
     }
 
     /**
-     * List all articles from Database.
-     * @return the list of articles(could be null).
+     * List Articles from Database.
+     * @param table UncheckedArticles/Articles
+     * @return Articles List
      */
-    public static ArrayList<Article> listArticles() {
+    public static ArrayList<Article> listArticles(String table) {
         try {
             openDB();
-            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM Articles");
+            PreparedStatement ps = blogConnection.prepareStatement("SELECT * FROM " + table);
             ResultSet rs = ps.executeQuery();
             ArrayList<Article> m_articles = new ArrayList<>();
             while (rs.next()) {
@@ -174,24 +197,23 @@ public class DBUtil {
         }
         return null;
     }
+
     /**
-     * delete Article from Articles only by author and specific title.
+     * Delete Articles from Database.
+     * @param id the unique index of Articles.
+     * @param table UncheckedArticles/Articles
      */
-//    public void deleteArticle(Article article) {
-//        try {
-//            openDB();
-//            PreparedStatement ps = blogConnection.prepareStatement("DELETE FROM Articles WHERE author = ? AND title = ?");
-//            ps.setString(1, article.getAuthor());
-//            ps.setString(2, article.getTitle());
-//            ps.execute();
-//            for (ArticleComment comment : article.getcommentList()) {
-//                deleteArticleComment(comment);
-//            }
-//            closeDB();
-//        } catch (Exception error) {
-//            error.printStackTrace();
-//        }
-//    }
+    public void deleteArticle(int id, String table) {
+        try {
+            openDB();
+            PreparedStatement ps = blogConnection.prepareStatement("DELETE FROM "+ table +" WHERE id=?");
+            ps.setInt(1, id);
+            ps.execute();
+            closeDB();
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+    }
     /**
      * update Article with specific field.
      * @param author
@@ -419,8 +441,34 @@ public class DBUtil {
                 error.printStackTrace();
             }
         }
+        public static void deleteFeedback(int id) {
+            try {
+                openDB();
+                PreparedStatement sql = blogConnection.prepareStatement("DELETE FROM Feedbacks WHERE id = ?");
+                sql.setInt(1, id);
+                sql.execute();
+                closeDB();
+            } catch (Exception error) {
+                error.printStackTrace();
+            }
+        }
+    public static ArrayList<Feedback> listFeedback() {
+        try {
+            openDB();
+            PreparedStatement sql = blogConnection.prepareStatement("SELECT * FROM Feedbacks");
+            ResultSet rs = sql.executeQuery();
+            ArrayList<Feedback> ans = new ArrayList<>();
+            while (rs.next()) {
+                ans.add(new Feedback(rs.getInt("id"), rs.getString("author"), rs.getDate("date"), rs.getString("content")));
+            }
+            closeDB();
+            return ans;
+        } catch (Exception error) {
+            error.printStackTrace();
+        }
+        return null;
+    }
     public static void main(String[] args) {
-        Feedback feedback = new Feedback("root", new Date(System.currentTimeMillis()), "test");
-        DBUtil.insertFeedback(feedback);
+        DBUtil.deleteFeedback(1);
     }
 }

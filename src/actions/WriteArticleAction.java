@@ -18,7 +18,7 @@ public class WriteArticleAction {
         this.m_article = m_article;
     }
     public String execute() {
-        DBUtil.insertArticle(m_article);
+        DBUtil.insertArticle(m_article, "UncheckedArticles");
         return "success";
     }
 }

@@ -63,7 +63,7 @@
 //            atLink    : false,    // disable @link
 //            emailLink : false,    // disable email address auto link
             todoList  : true,
-            path      : './plugin/editor.md-master/lib/'
+            path      : '../plugin/editor.md-master/lib/'
         });
     });
 </script>

@@ -88,7 +88,7 @@
 <!-- Modal Trigger -->
 <a class="btn-flat" style="position: fixed; bottom: 30px;
     right: 20px; background-color: white;color: darkseagreen; font-size: larger;
-    vertical-align: sub" onclick="feedback()"><i class="Small material-icons">turned_in</i>Feedback!</a>
+    vertical-align: sub; border: rgba(75, 75, 75, 0.62) solid 1px" onclick="feedback()"><i class="Small material-icons">turned_in</i>Feedback!</a>
 
 <!-- Modal Structure -->
 <div id="modal-feedback" class="modal">

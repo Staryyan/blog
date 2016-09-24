@@ -65,5 +65,20 @@
                 <param name="root">result</param>
             </result>
         </action>
+        <action name="listUsers" class="actions.ListUsersAction" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="listFeedback" class="actions.ListFeedback" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+        <action name="deleteFeedback" class="actions.deleteFeedback" method="execute">
+            <result name="success" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
     </package>
 </struts>

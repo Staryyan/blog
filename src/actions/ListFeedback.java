@@ -1,25 +1,25 @@
 package actions;
 
-import utils.dbUtil.DBUtil;
-import beans.Article;
+import beans.Feedback;
 import net.sf.json.JSONObject;
+import utils.dbUtil.DBUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by yanzexin on 16/9/12.
+ * Created by yanzexin on 16/9/24.
  * All right reserved.
  */
-public class ListArticlesAction {
+public class ListFeedback {
     private String none = "";
     private String result = "";
 
-    public ListArticlesAction() {
+    public ListFeedback() {
     }
 
-    public ListArticlesAction(String none, String result) {
+    public ListFeedback(String none, String result) {
 
         this.none = none;
         this.result = result;
@@ -43,19 +43,18 @@ public class ListArticlesAction {
     }
 
     public String execute() {
-        JSONObject jsonObject = new JSONObject();
         ArrayList<Map<String, String>> list = new ArrayList<>();
-        for (Article each : DBUtil.listArticles("Articles")) {
+        for (Feedback feedback : DBUtil.listFeedback()) {
             Map<String, String> map = new HashMap<>();
-            map.put("id", each.getId() + "");
-            map.put("title", each.getTitle());
-            map.put("description", each.getDescription());
+            map.put("id", feedback.getId() + "");
+            map.put("date", feedback.getDate() + "");
+            map.put("author", feedback.getAuthor());
+            map.put("content", feedback.getContent());
             list.add(map);
         }
+        JSONObject jsonObject = new JSONObject();
         jsonObject.put("list", list);
         result = jsonObject.toString();
         return "success";
-    }
-    public static void main(String[] args) {
     }
 }

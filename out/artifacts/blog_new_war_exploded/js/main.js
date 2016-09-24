@@ -209,8 +209,16 @@ function Signed() {
                 profile.append("<li><a onclick='register()'>Register</a></li>");
             } else {
                 profile.empty();
-                profile.append("<li><a id='name' onclick='Profile()' style='margin-left:20px; margin-right:20px;'>"+ Data["userName"] +"</a></li>");
-                document.getElementById("changePassword_userName").value = Data["userName"];
+                if ( Data["userName"] == "root") {
+                    profile.append("<li><a>Check Articles</a></li>");
+                    profile.append("<li><a href='../web-content/feedbackList.jsp'>Check Feedback</a></li>");
+                    profile.append("<li><a href='../web-content/userList.jsp'>User List</a>");
+                    profile.append("<li><a id='name' onclick='Profile()'>"+ Data["userName"] +"</a></li>");
+                    document.getElementById("changePassword_userName").value = Data["userName"];
+                } else {
+                    profile.append("<li><a id='name' onclick='Profile()'>"+ Data["userName"] +"</a></li>");
+                    document.getElementById("changePassword_userName").value = Data["userName"];
+                }
             }
         }
     });
