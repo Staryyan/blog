@@ -7,7 +7,7 @@
     <link href="../plugin/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../css/main.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
 <div class="container">
@@ -56,7 +56,6 @@
 </div>
 <jsp:include page="Footer.jsp" />
 <!--  Scripts-->
-<script src="../js/jquery-3.1.0.min.js"></script>
 <script src="../plugin/materialize/js/materialize.js"></script>
 <script src="../plugin/materialize/js/materialize.min.js"></script>
 </body>

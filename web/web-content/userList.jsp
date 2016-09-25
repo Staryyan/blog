@@ -42,9 +42,9 @@
     <script type="text/javascript" src="../js/main.js"></script>
     <script>
         $(document).ready(function () {
-            loadUserList();
+            loadUserList(1);
         });
-        function loadUserList() {
+        function loadUserList(page) {
             var url="listUsers";
             var params={
                 none:""
@@ -57,13 +57,29 @@
                 success:function (data) {
                     var Data = eval("(" + data + ")");
                     var list = Data["list"];
-                    for (var object in list) {
-                        var li = $("<li></li>");
-                        li.append("<div class='collapsible-header'><i class='material-icons'>perm_identity</i>" + list[object]["userName"] + "</div>");
-                        li.append("<div class='collapsible-body'><p style='padding-bottom: 15px; padding-top: 15px;'><i class='material-icons'>email</i>" + list[object]["email"] + "</p>" +
-                                "<p style='padding-bottom: 15px; padding-top: 15px;'><i class='material-icons'>contacts</i>"+ list[object]["phone"] +"</p></div>");
-                        $("#user-list").append(li);
+                    var total = 0;
+                    if (list.length == 0) {
+                        $("#User-div").append("<h1>No articles here!</h1>")
                     }
+                    for (var object in list) {
+                        total++;
+                        if (object < 16 * page && object >= 16 * (page - 1)) {
+                            var li = $("<li></li>");
+                            li.append("<div class='collapsible-header'><i class='material-icons'>perm_identity</i>" + list[object]["userName"] + "</div>");
+                            li.append("<div class='collapsible-body'><p style='padding-bottom: 15px; padding-top: 15px;'><i class='material-icons'>email</i>" + list[object]["email"] + "</p>" +
+                                    "<p style='padding-bottom: 15px; padding-top: 15px;'><i class='material-icons'>contacts</i>" + list[object]["phone"] + "</p></div>");
+                            $("#user-list").append(li);
+                        }
+                    }
+                    var pages = total / 16;
+                    if (total % 16 != 0) {
+                        pages++;
+                    }
+                    $("#User-page").empty();
+                    for (var i = 1; i <= pages; i++) {
+                        $("#User-page").append("<li id='page"+ i +"' class='waves-light pages'><a onclick='loadArticles("+i+")'>"+i+"</a></li>");
+                    }
+                    $("#page"+page).addClass("active");
                 },
                 error:function (XML) {
                     alert(XML.responseText);
@@ -75,11 +91,11 @@
 <body>
 <div class="container">
     <jsp:include page="Navigation.jsp" />
-    <ul id="user-list" class="collapsible" data-collapsible="accordion" style="margin-top: 40px;">
-    </ul>
-    <ul class="pagination">
-        <li class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
-        <li id="last-page" class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+    <div id="User-div" style="min-height: 600px">
+        <ul id="user-list" class="collapsible" data-collapsible="accordion" style="margin-top: 40px;">
+        </ul>
+    </div>
+    <ul id="User-page" class="pagination">
     </ul>
 </div>
 <jsp:include page="Footer.jsp"/>

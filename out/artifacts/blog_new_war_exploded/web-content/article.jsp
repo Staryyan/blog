@@ -1,5 +1,3 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="beans.Article" %>
 <html>
 <head>
     <title>Title</title>
@@ -33,21 +31,21 @@
     <link href="../plugin/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../css/main.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/Article.js"></script>
 </head>
 <body>
 <div class="container">
     <jsp:include page="Navigation.jsp" />
-    <ul id="list" class="collapsible popout" data-collapsible="accordion" style="margin-top: 40px;">
-    </ul>
-    <ul class="pagination">
-        <li class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
-        <li id="last-page" class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+    <div id="list-div" style="min-height: 600px">
+        <ul id="list" class="collapsible popout" data-collapsible="accordion" style="margin-top: 40px;">
+        </ul>
+    </div>
+    <ul id="Articles-list" class="pagination">
     </ul>
 </div>
 <jsp:include page="Footer.jsp"/>
 <!--  Scripts-->
-<script src="../js/jquery-3.1.0.min.js"></script>
 <script src="../plugin/materialize/js/materialize.js"></script>
 <script src="../plugin/materialize/js/materialize.min.js"></script>
 </body>

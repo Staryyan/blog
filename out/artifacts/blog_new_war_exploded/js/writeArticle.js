@@ -16,11 +16,20 @@ function Signed() {
             var profile = $("#profile");
             if (!Data["signed"]) {
                 profile.empty();
-                profile.append("<li><a class='modal-trigger' href='#modal-login'>Log in</a></li>");
-                profile.append("<li><a class='modal-trigger' href='#modal-register'>Register</a></li>");
+                profile.append("<li><a onclick='logIn()'>Log in</a></li>");
+                profile.append("<li><a onclick='register()'>Register</a></li>");
             } else {
                 profile.empty();
-                profile.append("<li><a onclick='Profile()' style='margin-left:20px; margin-right:20px;'>"+ Data["userName"] +"</a></li>");
+                if ( Data["userName"] == "root") {
+                    profile.append("<li><a href='../web-content/listCheckArticles.jsp'>Check Articles</a></li>");
+                    profile.append("<li><a href='../web-content/feedbackList.jsp'>Check Feedback</a></li>");
+                    profile.append("<li><a href='../web-content/userList.jsp'>User List</a>");
+                    profile.append("<li><a id='name' onclick='Profile()'>"+ Data["userName"] +"</a></li>");
+                    document.getElementById("changePassword_userName").value = Data["userName"];
+                } else {
+                    profile.append("<li><a id='name' onclick='Profile()'>"+ Data["userName"] +"</a></li>");
+                    document.getElementById("changePassword_userName").value = Data["userName"];
+                }
                 document.getElementById("author").value = Data["userName"];
             }
         }

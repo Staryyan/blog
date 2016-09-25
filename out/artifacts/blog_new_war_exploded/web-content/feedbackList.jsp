@@ -45,11 +45,11 @@
 <body>
     <div class="container">
         <jsp:include page="Navigation.jsp" />
-        <ul id="feedback-list" class="collapsible" data-collapsible="accordion" style="margin-top: 40px;">
-        </ul>
-        <ul class="pagination">
-            <li class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
-            <li id="last-page" class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+        <div id="Feedback-div" style="min-height: 600px">
+            <ul id="feedback-list" class="collapsible" data-collapsible="accordion" style="margin-top: 40px;">
+            </ul>
+        </div>
+        <ul id="feedback-list-page" class="pagination">
         </ul>
     </div>
 

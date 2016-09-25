@@ -7,38 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="623a4840-03db-48d3-b60c-12a3619bfdaf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/ApplyArticlesAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/DenyArticlesAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/ListUncheckedArticlesAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/ReplyAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/deleteUncheckedArticlesAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/feedbackList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/listCheckArticles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web-content/checkArticles.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/web-content/listCheckArticles.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/WriteArticleAction.class" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/actions/WriteArticleAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/utils/dbUtil/DBUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/utils/dbUtil/DBUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/utils/mailUtil/Mail.class" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/utils/mailUtil/Mail.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/actions/WriteArticleAction.class" afterPath="$PROJECT_DIR$/out/production/blog_new/actions/WriteArticleAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/utils/dbUtil/DBUtil.class" afterPath="$PROJECT_DIR$/out/production/blog_new/utils/dbUtil/DBUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/utils/mailUtil/Mail.class" afterPath="$PROJECT_DIR$/out/production/blog_new/utils/mailUtil/Mail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog.graffle" afterPath="$PROJECT_DIR$/blog.graffle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/main.js" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/writeArticle.js" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/writeArticle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/feedbackList.jsp" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/feedbackList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/readArticle.jsp" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/readArticle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/writeArticle.jsp" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/writeArticle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/blog_new/struts.xml" afterPath="$PROJECT_DIR$/out/production/blog_new/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/WriteArticleAction.java" afterPath="$PROJECT_DIR$/src/actions/WriteArticleAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/dbUtil/DBUtil.java" afterPath="$PROJECT_DIR$/src/utils/dbUtil/DBUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/mailUtil/Mail.java" afterPath="$PROJECT_DIR$/src/utils/mailUtil/Mail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/main.js" afterPath="$PROJECT_DIR$/web/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/Article.js" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/js/Article.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/article.jsp" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/article.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/blog_new_war_exploded/web-content/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/Article.js" afterPath="$PROJECT_DIR$/web/js/Article.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/feedbackList.js" afterPath="$PROJECT_DIR$/web/js/feedbackList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/listCheckArticles.js" afterPath="$PROJECT_DIR$/web/js/listCheckArticles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/writeArticle.js" afterPath="$PROJECT_DIR$/web/js/writeArticle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/article.jsp" afterPath="$PROJECT_DIR$/web/web-content/article.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/feedbackList.jsp" afterPath="$PROJECT_DIR$/web/web-content/feedbackList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/readArticle.jsp" afterPath="$PROJECT_DIR$/web/web-content/readArticle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/writeArticle.jsp" afterPath="$PROJECT_DIR$/web/web-content/writeArticle.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/listCheckArticles.jsp" afterPath="$PROJECT_DIR$/web/web-content/listCheckArticles.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/main.jsp" afterPath="$PROJECT_DIR$/web/web-content/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web-content/userList.jsp" afterPath="$PROJECT_DIR$/web/web-content/userList.jsp" />
     </list>
     <ignored path="blog_new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,6 +47,16 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - blog@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExportToHTMLSettings">
@@ -75,21 +68,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="listCheckArticles.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/web-content/listCheckArticles.jsp">
+      <file leaf-file-name="Article.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/Article.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+            <state relative-caret-position="300">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <marker date="1474789911000" expanded="true" signature="1153:1241" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/web-content/userList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="67" column="41" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+              <folding>
+                <marker date="1474807927000" expanded="true" signature="2742:2782" ph="..." />
+                <marker date="1474807927000" expanded="true" signature="2903:2943" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/web-content/article.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkArticles.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/web-content/checkArticles.jsp">
+      <file leaf-file-name="writeArticle.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/web-content/writeArticle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="285">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writeArticle.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/writeArticle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="224" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -120,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/writeArticle.jsp" />
         <option value="$PROJECT_DIR$/web/Test.html" />
         <option value="$PROJECT_DIR$/src/beans/ArticleComment.java" />
         <option value="$PROJECT_DIR$/web/main.jsp" />
@@ -141,14 +178,10 @@
         <option value="$PROJECT_DIR$/src/beans/Feedback.java" />
         <option value="$PROJECT_DIR$/src/utils/dbUtil/DBUtilTest.java" />
         <option value="$PROJECT_DIR$/src/actions/FeedbackAction.java" />
-        <option value="$PROJECT_DIR$/web/web-content/main.jsp" />
-        <option value="$PROJECT_DIR$/web/js/Article.js" />
         <option value="$PROJECT_DIR$/src/actions/SignedAction.java" />
         <option value="$PROJECT_DIR$/src/beans/User.java" />
         <option value="$PROJECT_DIR$/src/actions/ListArticlesAction.java" />
-        <option value="$PROJECT_DIR$/web/web-content/article.jsp" />
         <option value="$PROJECT_DIR$/src/actions/ListUsersAction.java" />
-        <option value="$PROJECT_DIR$/web/web-content/userList.jsp" />
         <option value="$PROJECT_DIR$/src/actions/deleteFeedback.java" />
         <option value="$PROJECT_DIR$/web/web-content/Navigation.jsp" />
         <option value="$PROJECT_DIR$/src/actions/ListFeedback.java" />
@@ -164,13 +197,18 @@
         <option value="$PROJECT_DIR$/src/actions/ApplyArticlesAction.java" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/web/web-content/writeArticle.jsp" />
-        <option value="$PROJECT_DIR$/web/js/writeArticle.js" />
-        <option value="$PROJECT_DIR$/web/js/listCheckArticles.js" />
-        <option value="$PROJECT_DIR$/web/web-content/listCheckArticles.jsp" />
-        <option value="$PROJECT_DIR$/web/js/feedbackList.js" />
-        <option value="$PROJECT_DIR$/web/web-content/feedbackList.jsp" />
         <option value="$PROJECT_DIR$/web/js/checkArticles.js" />
         <option value="$PROJECT_DIR$/web/web-content/checkArticles.jsp" />
+        <option value="$PROJECT_DIR$/web/web-content/main.jsp" />
+        <option value="$PROJECT_DIR$/web/web-content/listCheckArticles.jsp" />
+        <option value="$PROJECT_DIR$/web/js/listCheckArticles.js" />
+        <option value="$PROJECT_DIR$/web/web-content/feedbackList.jsp" />
+        <option value="$PROJECT_DIR$/web/js/feedbackList.js" />
+        <option value="$PROJECT_DIR$/web/web-content/article.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/web-content/userList.jsp" />
+        <option value="$PROJECT_DIR$/web/js/Article.js" />
+        <option value="$PROJECT_DIR$/web/js/writeArticle.js" />
       </list>
     </option>
   </component>
@@ -249,6 +287,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,6 +318,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,10 +356,6 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -327,86 +367,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbUtil" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,7 +385,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -1142,7 +1112,13 @@
       <workItem from="1474719916818" duration="129000" />
       <workItem from="1474720116673" duration="96000" />
       <workItem from="1474720318978" duration="14000" />
-      <workItem from="1474720422166" duration="7626000" />
+      <workItem from="1474720422166" duration="7889000" />
+      <workItem from="1474763608817" duration="294000" />
+      <workItem from="1474767090947" duration="364000" />
+      <workItem from="1474771819008" duration="2218000" />
+      <workItem from="1474775463983" duration="626000" />
+      <workItem from="1474786014300" duration="1197000" />
+      <workItem from="1474787443307" duration="3134000" />
     </task>
     <servers />
   </component>
@@ -1179,11 +1155,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95931000" />
+    <option name="totallyTimeSpent" value="104027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1194,7 +1170,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31445783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1202,11 +1178,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459228" sideWeight="0.49196786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21459228" sideWeight="0.50803214" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15522175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41084337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41084337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1214,6 +1189,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1237,7 +1213,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31445783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1269,68 +1245,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/actions/FindPasswordAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/CheckUserNameAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/mailUtil/MailTest.java" />
-    <entry file="file://$PROJECT_DIR$/web/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.ArticleComments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.Discussions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.DiscussionComments">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1338,7 +1285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="63" column="57" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,7 +1300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1363,19 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.Articles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1397,7 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="50" column="52" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,15 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#667#668#0" expanded="false" />
-            <element signature="e#711#712#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1421,7 +1342,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1429,15 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#461#462#0" expanded="false" />
-            <element signature="e#489#490#0" expanded="false" />
-            <element signature="e#522#523#0" expanded="false" />
-            <element signature="e#551#552#0" expanded="false" />
-            <element signature="e#595#596#0" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1445,23 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,33 +1363,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.Feedbacks">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.Users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1503,7 +1394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,15 +1401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/Article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="242" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,7 +1408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,44 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/readArticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/article.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/userList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-          <folding>
-            <marker date="1474694456000" expanded="true" signature="2436:2476" ph="..." />
-            <marker date="1474694456000" expanded="true" signature="2593:2633" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1580,35 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="205" column="17" selection-start-line="205" selection-start-column="17" selection-end-line="205" selection-end-column="17" />
-          <folding>
-            <marker date="1474727027000" expanded="true" signature="1471:1509" ph="SELECT * FRO... Users" />
-            <marker date="1474727027000" expanded="true" signature="2172:2209" ph="INSERT INTO Users... " />
-            <marker date="1474727027000" expanded="true" signature="2797:2850" ph="DELETE FROM " />
-            <marker date="1474727027000" expanded="true" signature="3517:3587" ph="UPDATE Users... " />
-            <marker date="1474727027000" expanded="true" signature="4058:4097" ph="SELECT * FRO... Users" />
-            <marker date="1474727027000" expanded="true" signature="4846:4858" ph="INSERT INTO " />
-            <marker date="1474727027000" expanded="true" signature="4846:4935" ph="INSERT INTO Articles... " />
-            <marker date="1474727027000" expanded="true" signature="4869:4935" ph="(author, dat... " />
-            <marker date="1474727027000" expanded="true" signature="5622:5635" ph="SELECT * FRO... ?" />
-            <marker date="1474727027000" expanded="true" signature="5622:5636" ph="SELECT * FRO... missingValue" />
-            <marker date="1474727027000" expanded="true" signature="6294:6307" ph="SELECT * FRO... " />
-            <marker date="1474727027000" expanded="true" signature="6294:6333" ph="SELECT * FRO... Articles" />
-            <marker date="1474727027000" expanded="true" signature="7079:7091" ph="DELETE FROM " />
-            <marker date="1474727027000" expanded="true" signature="7079:7113" ph="DELETE FROM " />
-            <marker date="1474727027000" expanded="true" signature="8377:8424" ph="INSERT INTO ArticleComments... " />
-            <marker date="1474727027000" expanded="true" signature="9068:9110" ph="SELECT * FRO... ArticleComments" />
-            <marker date="1474727027000" expanded="true" signature="15455:15516" ph="INSERT INTO Feedbacks... " />
-            <marker date="1474727027000" expanded="true" signature="16017:16051" ph="DELETE FROM " />
-            <marker date="1474727027000" expanded="true" signature="16413:16436" ph="SELECT * FRO... Feedbacks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/Navigation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1616,53 +1429,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/writeArticle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/writeArticle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <marker date="1474728269000" expanded="true" signature="739:775" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3660">
-          <caret line="244" column="9" selection-start-line="244" selection-start-column="9" selection-end-line="244" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.UncheckedArticles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1670,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-117">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="18" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1678,19 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1698,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1706,19 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1726,53 +1476,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="102" column="43" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/listCheckArticles.js">
+    <entry file="file://$PROJECT_DIR$/web/js/checkArticles.js" />
+    <entry file="file://$PROJECT_DIR$/UserDemanding.html/Expanded.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserDemanding.html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1474728511000" expanded="true" signature="871:955" ph="..." />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/feedbackList.jsp">
+    <entry file="file://$PROJECT_DIR$/UserDemanding.html/LeafRowHandle.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/Navigation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="242">
+          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/readArticle.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="177" column="31" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/95933ad0/ebcb42a2-6b11-4434-abe1-2b24d83b71a6/blog.Articles">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/listCheckArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/feedbackList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
           <folding>
-            <marker date="1474728511000" expanded="true" signature="683:723" ph="..." />
-            <marker date="1474728511000" expanded="true" signature="825:865" ph="..." />
-            <marker date="1474728511000" expanded="true" signature="1025:1109" ph="..." />
-            <marker date="1474728511000" expanded="true" signature="1320:1361" ph="..." />
+            <marker date="1474789671000" expanded="true" signature="515:533" ph="..." />
+            <marker date="1474789671000" expanded="true" signature="971:1011" ph="..." />
+            <marker date="1474789671000" expanded="true" signature="1119:1159" ph="..." />
+            <marker date="1474789671000" expanded="true" signature="1330:1418" ph="..." />
+            <marker date="1474789671000" expanded="true" signature="1635:1676" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/listCheckArticles.jsp">
+    <entry file="file://$PROJECT_DIR$/web/web-content/feedbackList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="341">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/checkArticles.js">
+    <entry file="file://$PROJECT_DIR$/web/web-content/checkArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1415">
+          <caret line="192" column="46" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/listCheckArticles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="40" column="47" selection-start-line="32" selection-start-column="12" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <marker date="1474789190000" expanded="true" signature="542:560" ph="..." />
+            <marker date="1474789190000" expanded="true" signature="1181:1269" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_new.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1780,10 +1594,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/web-content/checkArticles.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/userList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="67" column="41" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+          <folding>
+            <marker date="1474807927000" expanded="true" signature="2742:2782" ph="..." />
+            <marker date="1474807927000" expanded="true" signature="2903:2943" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/Article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <marker date="1474789911000" expanded="true" signature="1153:1241" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/article.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/web-content/writeArticle.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="224" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/writeArticle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
           <folding />
         </state>
       </provider>
@@ -1794,7 +1661,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>blog_new:war</last-edited>
+          <last-edited>blog_new:war2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

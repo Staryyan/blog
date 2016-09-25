@@ -46,11 +46,11 @@
 <body>
 <div class="container">
     <jsp:include page="Navigation.jsp" />
-    <ul id="articles-list" class="collapsible" data-collapsible="accordion" style="margin-top: 40px;">
-    </ul>
-    <ul class="pagination">
-        <li class="waves-effect"><a><i class="material-icons">chevron_left</i></a></li>
-        <li id="last-page" class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+    <div id="UncheckedArticles-div" style="min-height: 600px">
+        <ul id="articles-list" class="collapsible" data-collapsible="accordion" style="margin-top: 40px;">
+        </ul>
+    </div>
+    <ul id="UncheckedArticles-list" class="pagination">
     </ul>
 </div>
 
