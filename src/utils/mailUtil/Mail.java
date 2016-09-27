@@ -74,7 +74,7 @@ public class Mail {
 
     public static void main(String[] args) {
         try {
-            Mail.send("718202260@qq.com", "I Am stary. How are you?");
+            Mail.send("staryBlog@163.com", "I Am stary. How are you?");
         } catch (Exception error) {
             error.printStackTrace();
         }

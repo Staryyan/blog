@@ -14,10 +14,32 @@
     <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/writeArticle.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#modal-alarm").openModal();
+        });
+        function disagree() {
+            window.location.href = "article.jsp";
+        }
+    </script>
 </head>
 <body>
 <div class="container">
     <jsp:include page="Navigation.jsp"/>
+
+    <!-- Modal Structure -->
+    <div id="modal-alarm" class="modal" style="width: 300px">
+        <div class="modal-content">
+            <h4 style="color: red; text-align: center">Warning</h4>
+            <p>Thanks for sharing your opinion. What you have written will be sent to
+               administrator and he will check it sooner.
+               We will reserve your right. Don't worry about that.</p>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close btn-flat" style="float: left">Agree!</a>
+            <a class=" modal-action modal-close btn-flat" onclick="disagree()" style="float: right">Disagree!</a>
+        </div>
+    </div>
     <div class="row" style="margin-top: 40px;">
         <form class="col s12" action="writeArticle.action" method="post">
                 <input name="m_article.author" id="author" value="" required type="text" class="validate" style="display: none">
@@ -38,7 +60,7 @@
             <textarea style="display:none;" name="m_article.content"></textarea>
         </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action" style="float: right">Finish!
+        <button class="btn" type="submit" name="action" style="float: right">Finish!
             <i class="material-icons right">send</i>
         </button>
     </form>

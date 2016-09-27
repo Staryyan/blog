@@ -55,7 +55,7 @@
                 data:params,
                 async:false,
                 success:function (Data) {
-                    window.location.href = "listCheckedArticles.jsp";
+                    window.location.href = "listCheckArticles.jsp";
                 },
                 error:function (XML) {
                     alert(XML.responseText);
@@ -74,7 +74,7 @@
                 data:params,
                 async:false,
                 success:function (Data) {
-                    Window.location.href = "listCheckedArticles.jsp";
+                    window.location.href = "listCheckArticles.jsp";
                 },
                 error:function (XML) {
                     alert(XML.responseText);
@@ -114,8 +114,8 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a class="modal-action modal-close btn-flat" id="feedback-apply" onclick="reply_apply()">Apply!</a>
             <a class="modal-action modal-close btn-flat" id="feedback-deny" onclick="reply_deny()">deny!</a>
+            <a class="modal-action modal-close btn-flat" id="feedback-apply" onclick="reply_apply()">Apply!</a>
         </div>
     </div>
 </div>

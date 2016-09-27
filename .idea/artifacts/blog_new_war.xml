@@ -3,13 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/blog_new_war</output-path>
     <root id="archive" name="blog_new_war.war">
       <element id="artifact" artifact-name="blog_new:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="mysql" />
-          <element id="library" level="project" name="junit-4.12" />
-          <element id="library" level="module" name="testng" module-name="blog_new" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>

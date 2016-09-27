@@ -9,16 +9,20 @@ import utils.dbUtil.DBUtil;
  * All right reserved.
  */
 public class DenyArticlesAction {
-    private Article article;
+    private int id;
     private String content;
     private String result;
 
-    public String getResult() {
-        return result;
+    public DenyArticlesAction() {
     }
 
-    public void setResult(String result) {
-        this.result = result;
+    public int getId() {
+
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getContent() {
@@ -29,19 +33,16 @@ public class DenyArticlesAction {
         this.content = content;
     }
 
-    public DenyArticlesAction() {
+    public String getResult() {
+        return result;
     }
 
-    public Article getArticle() {
-
-        return article;
-    }
-
-    public void setArticle(Article article) {
-        this.article = article;
+    public void setResult(String result) {
+        this.result = result;
     }
 
     public String execute() {
+        Article article = DBUtil.queryArticle(id, "UncheckedArticles");
         User author = DBUtil.queryUser(article.getAuthor());
         try {
 //            Mail.send(author.getEmail(), content);

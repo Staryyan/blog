@@ -19,9 +19,11 @@
         }
     </style>
 	<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script>
         $(document).ready(function () {
-            reloadComments();
+            reloadComments(1);
+            Signed();
             $("#comment").click(function () {
                 var url = "signed";
                 var params = {
@@ -44,9 +46,9 @@
                 });
             });
             $("#comment-submit").click(function () {
-                var url = "InsertArticleCommentAction";
+                var url = "insertArticleComment";
                 var params = {
-                    author:$("#name").val(),
+                    author:$("#changePassword_userName").val(),
                     content:$("#comment-content").val(),
                     id:<%=id%>
                 };
@@ -59,6 +61,7 @@
                         Materialize.toast("Comment succeed!", 2000);
                         reloadComments();
                         $("#modal-comment").closeModal();
+                        reloadComments(1);
                     },
                     error:function (XML) {
                         alert(XML.responseText);
@@ -67,10 +70,10 @@
 
             });
         });
-        function reloadComments() {
-            var url = "ListArticleCommentsAction";
+        function Signed() {
+            var url = "signed";
             var params = {
-                id:<%=m_article.getId()%>
+                none:""
             };
             $.ajax({
                 url:url,
@@ -79,20 +82,68 @@
                 async:false,
                 success:function (data) {
                     var Data = eval("("+data+")");
-                    var Comments = Data["comments"];
-                    var comment_id = $("#comments");
-                    for (var comment in Comments) {
-                        comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Author:</small>" + Comments[comment]["author"]  + "</h5>");
-                        comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Date:</small>" + Comments[comment]["date"] + "</h5>");
-                        comment_id.append("<p>" + Comments[comment]["content"] + "</p>");
-                        comment_id.append("<hr />");
+                    var profile = $("#profile");
+                    if (!Data["signed"]) {
+                        profile.empty();
+                        profile.append("<li><a onclick='logIn()'>Log in</a></li>");
+                        profile.append("<li><a onclick='register()'>Register</a></li>");
+                    } else {
+                        profile.empty();
+                        if ( Data["userName"] == "root") {
+                            profile.append("<li><a href='../web-content/listCheckArticles.jsp'>Check Articles</a></li>");
+                            profile.append("<li><a href='../web-content/feedbackList.jsp'>Check Feedback</a></li>");
+                            profile.append("<li><a href='../web-content/userList.jsp'>User List</a>");
+                        }
+                        profile.append("<li><a id='name' onclick='Profile()'>"+ Data["userName"] +"</a></li>");
+                        document.getElementById("changePassword_userName").value = Data["userName"];
                     }
                 }
-
+            });
+        }
+        function reloadComments(page) {
+            var url = "listArticleComments";
+            var params = {
+                id:<%=m_article.getId()%>
+            };
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: params,
+                async: false,
+                success: function (data) {
+                    var Data = eval("(" + data + ")");
+                    var Comments = Data["comments"];
+                    var comment_id = $("#comments");
+                    comment_id.empty();
+                    var total = 0;
+                    if (Comments.length == 0) {
+                        comment_id.append("<h4 style='text-align: center'>No comment here.</h4>")
+                    }
+                    for (var comment in Comments) {
+                        total++;
+                        if (comment < 5 * page && comment >= 5 * (page - 1)) {
+                            comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Author:</small>" + Comments[comment]["author"] + "</h5>");
+                            comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Date:</small>" + Comments[comment]["date"] + "</h5>");
+                            comment_id.append("<p>" + Comments[comment]["content"] + "</p>");
+                            comment_id.append("<hr />");
+                        }
+                    }
+                    var pages = total / 5;
+                    if (total % 5 != 0) {
+                        pages++;
+                    }
+                    $("#comment-list-page").empty();
+                    for (var i = 1; i <= pages; i++) {
+                        $("#comment-list-page").append("<li id='page"+ i +"' class='waves-light pages'><a onclick='reloadComments("+i+")'>"+i+"</a></li>");
+                    }
+                    $("#page"+page).addClass("active");
+                },
+                error:function (XML) {
+                    alert(XML.responseText);
+                }
             });
         }
     </script>
-    <script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
 <div class="container">
@@ -102,22 +153,26 @@
         <!-- Modal Trigger -->
         <a class="btn-floating btn-large red" id="comment"><i class="large material-icons">mode_edit</i></a>
     </div>
-
-    <h2 class="header"><%=m_article.getTitle()%></h2>
-    <h5><i class="material-icons left">perm_identity</i><small>Author:</small><%=m_article.getAuthor()%></h5>
-	<h5><i class="material-icons left">perm_identity</i><small>Date:</small><%=m_article.getDate()%></h5>
-    <h5><i class="material-icons left">info_outline</i><small>Description:</small><%=m_article.getDescription()%></h5>
-    <hr>
-    <div id="test-editormd-view2">
-        <textarea style="display:none;"><%=m_article.getContent()%></textarea>
+    <div style="min-height: 500px">
+        <h2 class="header"><%=m_article.getTitle()%></h2>
+        <h5><i class="material-icons left">perm_identity</i><small>Author:</small><%=m_article.getAuthor()%></h5>
+        <h5><i class="material-icons left">perm_identity</i><small>Date:</small><%=m_article.getDate()%></h5>
+        <h5><i class="material-icons left">info_outline</i><small>Description:</small><%=m_article.getDescription()%></h5>
+        <hr>
+        <div id="test-editormd-view2">
+            <textarea style="display:none;"><%=m_article.getContent()%></textarea>
+        </div>
     </div>
+
 
     <hr />
     <h2 class="header">Comments</h2>
+    <hr />
         <div id="comments">
 
         </div>
-
+    <ul id="comment-list-page" class="pagination">
+    </ul>
     <!-- Modal Structure -->
     <div id="modal-comment" class="modal bottom-sheet">
             <div class="modal-content" style="width: 800px; margin-left: auto; margin-right: auto;">
