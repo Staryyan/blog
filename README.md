@@ -1,7 +1,8 @@
 # Project blog
 In this project, I will build a personal blog which has two modes, administration mode and user mode. In order to finish this project finally, I separate the project as several parts and finishing them step by step. So let's do it. 
 
-
+本网站地址：
+http://www.staryblog.cn:8080/blog_new/web-content/article.jsp
 
 ## 阶段总结：
 ### 第一轮迭代：时间9.06-9.15。
