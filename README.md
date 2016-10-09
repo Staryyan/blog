@@ -33,3 +33,8 @@ In this project, I will build a personal blog which has two modes, administratio
 3）实现博客内容分集合。
 4）小细节完善。
 
+
+### 第四轮迭代：时间10-8-？
+这轮迭代将会持续很长的时间，在这轮迭代中，我会学习机器学习的知识，集成简单的文章，评论，回馈筛选系统，以及简单的文章推荐系统。这是一个全新的领域，但非常地有趣。
+Keep Coding。
+

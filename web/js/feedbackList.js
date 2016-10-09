@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    loadFeedback();
+    loadFeedback(1);
 });
-function loadFeedback() {
+function loadFeedback(page) {
     var url="listFeedback";
     var params={
         none:""

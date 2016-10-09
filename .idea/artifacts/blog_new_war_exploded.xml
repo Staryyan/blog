@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="blog_new:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/blog_new_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="blog_new/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="blog_new" />
@@ -14,10 +13,12 @@
           <element id="library" level="project" name="json-lib-2.4-jdk15" />
           <element id="library" level="project" name="javax.mail" />
           <element id="library" level="project" name="mysql" />
-          <element id="library" level="project" name="junit-4.12" />
           <element id="library" level="module" name="testng" module-name="blog_new" />
+          <element id="library" level="project" name="junit-4.12" />
         </element>
       </element>
+      <element id="library" level="project" name="src" />
+      <element id="javaee-facet-resources" facet="blog_new/web/Web" />
     </root>
   </artifact>
 </component>

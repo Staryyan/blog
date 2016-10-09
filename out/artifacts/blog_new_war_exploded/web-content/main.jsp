@@ -13,7 +13,6 @@
 <div class="container">
     <jsp:include page="Navigation.jsp" />
         <%--header introduction--%>
-
     <h1 class="header center red-text">Stary's blog</h1>
     <div class="row-center">
         <h5 class="header col s12 light">An interesting blog, but more than a blog, based on Material Design.</h5>

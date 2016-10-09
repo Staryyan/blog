@@ -122,6 +122,7 @@
                     for (var comment in Comments) {
                         total++;
                         if (comment < 5 * page && comment >= 5 * (page - 1)) {
+                            comment_id.append("<a class='btn red' style='float: right;' onclick='report()'>report</a>");
                             comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Author:</small>" + Comments[comment]["author"] + "</h5>");
                             comment_id.append("<h5><i class='material-icons left'>perm_identity</i><small>Date:</small>" + Comments[comment]["date"] + "</h5>");
                             comment_id.append("<p>" + Comments[comment]["content"] + "</p>");
@@ -142,6 +143,9 @@
                     alert(XML.responseText);
                 }
             });
+        }
+        function report() {
+            $("#modal-report").openModal()
         }
     </script>
 </head>
@@ -169,10 +173,20 @@
     <h2 class="header">Comments</h2>
     <hr />
         <div id="comments">
-
         </div>
     <ul id="comment-list-page" class="pagination">
     </ul>
+    <div id="modal-report" class="modal" style="width: 300px; margin-right: auto; margin-left: auto;">
+        <div class="modal-content">
+            <div class="input-field col s12">
+                <textarea id="comment-report" class="materialize-textarea"></textarea>
+                <label for="comment-content" style="color: red;">Report</label>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="waves-effect waves-green btn-flat" id="report-submit">Submit</button>
+            </div>
+        </div>
+    </div>
     <!-- Modal Structure -->
     <div id="modal-comment" class="modal bottom-sheet">
             <div class="modal-content" style="width: 800px; margin-left: auto; margin-right: auto;">
@@ -188,7 +202,6 @@
 </div>
 <jsp:include page="Footer.jsp"/>
 
-<script src="../plugin/editor.md-master/examples/js/jquery.min.js"></script>
 <script src="../plugin/editor.md-master/lib/marked.min.js"></script>
 <script src="../plugin/editor.md-master/lib/prettify.min.js"></script>
 

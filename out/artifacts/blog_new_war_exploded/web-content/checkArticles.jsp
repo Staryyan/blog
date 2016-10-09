@@ -121,7 +121,6 @@
 </div>
 <jsp:include page="Footer.jsp"/>
 
-<script src="../plugin/editor.md-master/examples/js/jquery.min.js"></script>
 <script src="../plugin/editor.md-master/lib/marked.min.js"></script>
 <script src="../plugin/editor.md-master/lib/prettify.min.js"></script>
 
